@@ -9,13 +9,13 @@ const isDev = process.env.NODE_ENV === "development";
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: {
-    main: "./pages/main/index.js",
-    analytics: "./pages/analytics/index.js",
-    about: "./pages/about/index.js"
+    main: "./pages/main/main.js",
+    analytics: "./pages/analytics/analytics.js",
+    about: "./pages/about/about.js"
   },
   output: {
-    filename: "[name].[chunkhash].js",
-    path: path.resolve(__dirname, "dist/main")
+    filename: "js/[name].[chunkhash].js",
+    path: path.resolve(__dirname, "dist")
   },
   module: {
     rules: [
@@ -40,7 +40,7 @@ module.exports = {
         {
           loader: "file-loader",
           options: {
-            name: "[name].[ext]",
+            name: "images/[name].[ext]",
             publicPath: "img",
             outputPath: "img",
             useRelativePath: true,
@@ -59,7 +59,7 @@ module.exports = {
         {
           loader: "file-loader",
           options: {
-            name: "./vendor/[name].[ext]" // путь до fonts ??
+            name: "vendor/fonts/[name].[ext]"
           }
         }
       ]
@@ -68,7 +68,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "style.[contenthash].css"
+      filename: "css/[name].[contenthash].css"
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
@@ -81,7 +81,20 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: false,
       template: "./pages/main/index.html",
-      filename: "index.html"
+      filename: "index.html",
+      chunks: ["main"]
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      template: "./pages/about/index.html",
+      filename: "about/index.html",
+      chunks: ["about"]
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      template: "./pages/analytics/index.html",
+      filename: "analytics/index.html",
+      chunks: ["analytics"]
     }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({

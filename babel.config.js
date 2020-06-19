@@ -7,9 +7,8 @@ const presets = [
         edge: "15",
         ie: "11",
         firefox: "50",
-        safari: "11.1"
-        //chromeMobile
-        //YandexBrowser
+        safari: "11.1",
+        ChromeAndroid: "81"
       },
       useBuiltIns: "usage",
       corejs: "3.4.1"
