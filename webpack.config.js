@@ -7,10 +7,15 @@ const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const isDev = process.env.NODE_ENV === "development";
 
 module.exports = {
-  entry: { main: "./src/index.js"},
+  context: path.resolve(__dirname, 'src'),
+  entry: {
+    main: "./pages/main/index.js",
+    analytics: "./pages/analytics/index.js",
+    about: "./pages/about/index.js"
+  },
   output: {
     filename: "[name].[chunkhash].js",
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, "dist/main")
   },
   module: {
     rules: [
@@ -54,7 +59,7 @@ module.exports = {
         {
           loader: "file-loader",
           options: {
-            name: "./vendor/[name].[ext]"
+            name: "./vendor/[name].[ext]" // путь до fonts ??
           }
         }
       ]
@@ -75,7 +80,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: false,
-      template: "./src/index.html",
+      template: "./pages/main/index.html",
       filename: "index.html"
     }),
     new WebpackMd5Hash(),
