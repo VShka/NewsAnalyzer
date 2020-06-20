@@ -1,3 +1,6 @@
+@import url('../../vendor/normalize.css');
+@import url('../../vendor/fonts.css');
+
 body {
     background: #a2a2a2;
 }
