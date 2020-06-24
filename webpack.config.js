@@ -40,7 +40,7 @@ module.exports = {
         {
           loader: "file-loader",
           options: {
-            name: "./images/[name].[ext]",
+            name: "[path][name].[ext]",
             esModule: false
           }
         },

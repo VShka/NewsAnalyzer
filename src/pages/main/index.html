@@ -20,19 +20,149 @@
 </head>
 <body class="page">
   <header class="header">
-    <a href="./index.html" class="header__logo">NewsAnalyzer</a>
-    <nav class="header__nav">
-      <ul class="header__nav-links">
-        <li class="header__nav-item">
-          <a href="./index.html" class="header__nav-link">Главная</a>
-        </li>
-        <li class="header__nav-item">
-          <a href="../about/index.html" class="header__nav-link">О проекте</a>
-        </li>
-      </ul>
-    </nav>
+      <a href="./index.html" class="header__logo">NewsAnalyzer</a>
+      <nav class="header__nav">
+        <ul class="header__nav-links">
+          <li class="header__nav-item">
+            <a href="./index.html" class="header__nav-link">Главная</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="../about/index.html" class="header__nav-link">О проекте</a>
+          </li>
+        </ul>
+      </nav>
   </header>
 
+  <main class="main">
+    <section class="search">
+      <h1 class="search__title">Что в мире творится?</h1>
+      <p class="search__text">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
+      <input type="search" class="search__form" placeholder="Введите тему новости">
+      <input type="submit" class="search__btn" placeholder="Искать">
+    </section>
+
+    <section class="search-result">
+      <h2 class="search-result__title">Результаты поиска</h2>
+      <a href="../analytics/index.html" class="search-result__link">Посмотреть аналитику</a>
+
+
+      <section class="cards-grid">
+        <div class="cards-grid__card">
+          <img src="<%=require('../../images/cards/card_1.jpg')%>" alt="Картинка результата поиска" class="card__bg">
+          <div class="card__info">
+            <p class="card__date">20.12.1995</p>
+            <h2 class="card__title">Заголовок</h2>
+            <p class="card__text">Какой-то текст</p>
+            <p class="card__source">Источник новости</p>
+          </div>
+        </div>
+        <div class="cards-grid__card">
+          <img src="<%=require('../../images/cards/card_2.jpg')%>" alt="Картинка результата поиска" class="card__bg">
+          <div class="card__info">
+            <p class="card__date">20.12.1995</p>
+            <h2 class="card__title">Заголовок</h2>
+            <p class="card__text">Какой-то текст</p>
+            <p class="card__source">Источник новости</p>
+          </div>
+        </div>
+        <div class="cards-grid__card">
+          <img src="<%=require('../../images/cards/card_3.jpg')%>" alt="Картинка результата поиска" class="card__bg">
+          <div class="card__info">
+            <p class="card__date">20.12.1995</p>
+            <h2 class="card__title">Заголовок</h2>
+            <p class="card__text">Какой-то текст</p>
+            <p class="card__source">Источник новости</p>
+          </div>
+        </div>
+        <div class="cards-grid__card">
+          <img src="<%=require('../../images/cards/card_4.jpg')%>" alt="Картинка результата поиска" class="card__bg">
+          <div class="card__info">
+            <p class="card__date">20.12.1995</p>
+            <h2 class="card__title">Заголовок</h2>
+            <p class="card__text">Какой-то текст</p>
+            <p class="card__source">Источник новости</p>
+          </div>
+        </div>
+        <div class="cards-grid__card">
+          <img src="<%=require('../../images/cards/card_5.jpg')%>" alt="Картинка результата поиска" class="card__bg">
+          <div class="card__info">
+            <p class="card__date">20.12.1995</p>
+            <h2 class="card__title">Заголовок</h2>
+            <p class="card__text">Какой-то текст</p>
+            <p class="card__source">Источник новости</p>
+          </div>
+        </div>
+        <div class="cards-grid__card">
+          <img src="<%=require('../../images/cards/card_6.jpg')%>" alt="Картинка результата поиска" class="card__bg">
+          <div class="card__info">
+            <p class="card__date">20.12.1995</p>
+            <h2 class="card__title">Заголовок</h2>
+            <p class="card__text">Какой-то текст</p>
+            <p class="card__source">Источник новости</p>
+          </div>
+        </div>
+      </section>
+
+      <button class="search-results__btn">Показать ещё</button>
+    </section>
+
+    <section class="author">
+      <div class="author__info">
+        <img src="<%=require('../../images/avatars/me.jpg')%>" alt="Аватарка автора" class="author__avatar">
+        <div class="author__text-container">
+          <h2 class="author__title">Об авторе</h2>
+          <p class="authot__text">
+            Это блок с описанием автора проекта. Здесь следует указать,
+            как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
+          </p>
+          <p class="authot__text">
+            Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились,
+            и чем можете помочь потенциальным заказчикам.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="footer">
+      <p class="footer__subscribe">Какой-то текст</p>
+
+      <nav class="footer__nav">
+        <ul class="footer__nav-links">
+          <li class="footer__nav-item">
+            <a href="./index.html" class="footer__nav-link">Главная</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="../about/index.html" class="footer__nav-link">О проекте</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="https://praktikum.yandex.ru/" class="footer__nav-link">Яндекс.Практикум</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="footer__social">
+        <ul class="footer__social-links">
+          <li class="footer__social-item">
+            <a href="./index.html" class="footer__social-link">
+              <img src="<%=require('../../images/social/vk.svg')%>" alt="" class="socila__item">
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a href="../about/index.html" class="footer__social-link">
+              <img src="<%=require('../../images/social/github.svg')%>" alt="" class="socila__item">
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a href="https://praktikum.yandex.ru/" class="footer__social-link">
+              <img src="<%=require('../../images/social/fb.svg')%>" alt="" class="socila__item">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+
+  </main>
 
 
 
