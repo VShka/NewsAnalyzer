@@ -2,9 +2,10 @@
 @import url(../../vendor/fonts.css);
 @import url(../../blocks/page/page.css);
 @import url(../../blocks/header/header.css);
-
-
-body {
-    background: #c03eb7;
-    color: #fff;
-}
+@import url(../../blocks/nav/nav.css);
+@import url(../../blocks/search/search.css);
+@import url(../../blocks/result-negative/result-negative.css);
+@import url(../../blocks/result-positive/result-positive.css);
+@import url(../../blocks/cards-grid/cards-grid.css);
+@import url(../../blocks/card/card.css);
+@import url(../../blocks/author/author.css);
