@@ -2,3 +2,10 @@
 @import url(./__text/search__text.css);
 @import url(./__form/search__form.css);
 @import url(./__btn/search__btn.css);
+@import url(./__container/search__container.css);
+
+.search {
+  background-image: url(../../images/bgHeader.png);
+  background-size: cover;
+  min-height: 496px;
+}

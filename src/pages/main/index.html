@@ -20,6 +20,7 @@
 </head>
 <body class="page">
   <header class="header">
+    <div class="header__container">
       <a href="./index.html" class="header__logo">NewsAnalyzer</a>
       <nav class="nav">
         <ul class="nav__list">
@@ -31,17 +32,20 @@
           </li>
         </ul>
       </nav>
+    </div>
   </header>
 
   <main class="main">
     <section class="search">
-      <h1 class="search__title">Что в мире творится?</h1>
-      <p class="search__text">
-        Введите в поиске любую тему и узнайте,
-        насколько популярной она была в новостях за прошедшую неделю.
-      </p>
-      <input type="search" class="search__form" placeholder="Введите тему новости">
-      <input type="submit" class="search__btn" placeholder="Искать">
+      <div class="search__container">
+        <h1 class="search__title title">Что в мире творится?</h1>
+        <p class="search__text">
+          Введите в поиске любую тему и узнайте,
+          насколько популярной она была в новостях за прошедшую неделю.
+        </p>
+        <input type="search" class="search__form" placeholder="Введите тему новости">
+        <input type="submit" class="search__btn" placeholder="Искать">
+      </div>
     </section>
 
     <section class="result-negative result-negative_hidden">
@@ -51,7 +55,7 @@
           alt="Грустный смайл"
           class="result-negative__image"
         >
-        <h3 class="result-negative__title">Ничего не найдено</h3>
+        <h3 class="result-negative__title title">Ничего не найдено</h3>
         <p class="result-negative__text">
           К сожалению по вашему запросу
           ничего не найдено.
@@ -60,7 +64,7 @@
     </section>
 
     <section class="result-positive">
-      <h2 class="result-positive__title">Результаты поиска</h2>
+      <h2 class="result-positive__title title">Результаты поиска</h2>
       <a href="../analytics/index.html" class="result-positive__link">Посмотреть аналитику</a>
 
       <div class="cards-grid">
@@ -72,7 +76,7 @@
           >
           <div class="card__info">
             <p class="card__date">20.12.1995</p>
-            <h2 class="card__title">Заголовок</h2>
+            <h2 class="card__title title">Заголовок</h2>
             <p class="card__text">Какой-то текст</p>
             <p class="card__source">Источник новости</p>
           </div>
@@ -85,7 +89,7 @@
           >
           <div class="card__info">
             <p class="card__date">20.12.1995</p>
-            <h2 class="card__title">Заголовок</h2>
+            <h2 class="card__title title">Заголовок</h2>
             <p class="card__text">Какой-то текст</p>
             <p class="card__source">Источник новости</p>
           </div>
@@ -98,7 +102,7 @@
           >
           <div class="card__info">
             <p class="card__date">20.12.1995</p>
-            <h2 class="card__title">Заголовок</h2>
+            <h2 class="card__title title">Заголовок</h2>
             <p class="card__text">Какой-то текст</p>
             <p class="card__source">Источник новости</p>
           </div>
@@ -111,7 +115,7 @@
           >
           <div class="card__info">
             <p class="card__date">20.12.1995</p>
-            <h2 class="card__title">Заголовок</h2>
+            <h2 class="card__title title">Заголовок</h2>
             <p class="card__text">Какой-то текст</p>
             <p class="card__source">Источник новости</p>
           </div>
@@ -124,7 +128,7 @@
           >
           <div class="card__info">
             <p class="card__date">20.12.1995</p>
-            <h2 class="card__title">Заголовок</h2>
+            <h2 class="card__title title">Заголовок</h2>
             <p class="card__text">Какой-то текст</p>
             <p class="card__source">Источник новости</p>
           </div>
@@ -137,7 +141,7 @@
           >
           <div class="card__info">
             <p class="card__date">20.12.1995</p>
-            <h2 class="card__title">Заголовок</h2>
+            <h2 class="card__title title">Заголовок</h2>
             <p class="card__text">Какой-то текст</p>
             <p class="card__source">Источник новости</p>
           </div>
@@ -155,7 +159,7 @@
           class="author__avatar"
         >
         <div class="author__text-container">
-          <h2 class="author__title">Об авторе</h2>
+          <h2 class="author__title title">Об авторе</h2>
           <p class="authot__text">
             Это блок с описанием автора проекта. Здесь следует указать,
             как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
