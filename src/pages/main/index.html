@@ -52,15 +52,14 @@
       </div>
     </section>
 
-    <section class="preloader">
-      <div class="preloader__container">
+    <section class="result result_show">
+
+      <section class="preloader preloader_hidden
         <i class="preloader__circle"></i>
         <h2 class="preloader__text">Идет поиск новостей...</h2>
-      </div>
-    </section>
+      </section>
 
-    <section class="result-negative result-negative_hidden">
-      <div class="result-negative__content">
+      <section class="result-negative">
         <img
           src="<%=require('../../images/sadSmile.svg')%>"
           alt="Грустный смайл"
@@ -71,11 +70,9 @@
           К сожалению по вашему запросу
           ничего не найдено.
         </p>
-      </div>
-    </section>
+      </section>
 
-    <section class="result-positive result-positive_hidden">
-      <div class="result-positive__container">
+      <section class="result-positive result-positive_hidden">
         <div class="result-positive__header">
           <h2 class="result-positive__title title">Результаты поиска</h2>
           <a href="../analytics/index.html" class="result-positive__link">Посмотреть аналитику</a>
@@ -165,7 +162,7 @@
         <div class="button__container">
           <button class="button result-positive__btn" type="button">Показать ещё</button>
         </div>
-      </div>
+      </section>
     </section>
 
     <section class="author">

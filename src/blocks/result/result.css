@@ -1,0 +1,4 @@
+@import url(./preloader/preloader.css);
+@import url(./result-negative/result-negative.css);
+@import url(./result-positive/result-positive.css);
+@import url(./_show/result_show.css);
