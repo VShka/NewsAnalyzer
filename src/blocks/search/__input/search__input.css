@@ -4,3 +4,7 @@
   margin-top: 64px;
   padding-left: 24px;
 }
+
+.search__input:focus {
+  box-shadow: 0 0 15px rgba(7, 140, 234, 0.5);
+}

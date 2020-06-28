@@ -9,3 +9,11 @@
   top: 112px;
   right: -62px;
 }
+
+.search__btn:hover {
+  background-color: #347EFF;
+}
+
+.search__btn:active {
+  background-color: #2A65CC;
+}
