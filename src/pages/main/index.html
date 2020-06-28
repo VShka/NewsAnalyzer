@@ -25,7 +25,7 @@
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="./index.html" class="nav__link">Главная</a>
+            <a href="./index.html" class="nav__link nav__link_active">Главная</a>
           </li>
           <li class="nav__item">
             <a href="../about/index.html" class="nav__link">О проекте</a>
@@ -38,13 +38,17 @@
   <main class="main">
     <section class="search">
       <div class="search__container">
-        <h1 class="search__title title">Что в мире творится?</h1>
-        <p class="search__text">
-          Введите в поиске любую тему и узнайте,
-          насколько популярной она была в новостях за прошедшую неделю.
-        </p>
-        <input type="search" class="search__form" placeholder="Введите тему новости">
-        <input type="submit" class="search__btn" placeholder="Искать">
+        <h1 class="title search__title">
+          Что в мире творится?
+        </h1>
+        <form class="form search__form" name="search" novalidate>
+          <label for="search" class="search__text">
+            Введите в поиске любую тему и узнайте,
+            насколько популярной она была в новостях за прошедшую неделю.
+          </label>
+          <input type="text" name="search" class="form__input search__input" minlength="2" placeholder="Что будем искать?">
+          <button type="submit" class="button search__btn">Искать</button>
+        </form>
       </div>
     </section>
 
@@ -64,91 +68,72 @@
     </section>
 
     <section class="result-positive">
-      <h2 class="result-positive__title title">Результаты поиска</h2>
-      <a href="../analytics/index.html" class="result-positive__link">Посмотреть аналитику</a>
+      <div class="result-positive__container">
+        <div class="result-positive__header">
+          <h2 class="result-positive__title title">Результаты поиска</h2>
+          <a href="../analytics/index.html" class="result-positive__link">Посмотреть аналитику</a>
+          <img src="../../images/arrow.svg" alt="Перейти к аналитике" class="result-positive__link-arrow">
+        </div>
 
-      <div class="cards-grid">
-        <div class="card">
-          <img
-            src="<%=require('../../images/cards/card_1.jpg')%>"
-            alt="Картинка результата поиска"
-            class="card__bg"
-          >
-          <div class="card__info">
-            <p class="card__date">20.12.1995</p>
-            <h2 class="card__title title">Заголовок</h2>
-            <p class="card__text">Какой-то текст</p>
-            <p class="card__source">Источник новости</p>
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card__bg"></div>
+            <div class="card__info">
+              <p class="card__date">20.12.1995</p>
+              <h2 class="card__title title">Заголовок</h2>
+              <p class="card__text">Какой-то текст</p>
+              <p class="card__source">Источник новости</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__bg"></div>
+            <div class="card__info">
+              <p class="card__date">20.12.1995</p>
+              <h2 class="card__title title">Заголовок</h2>
+              <p class="card__text">Какой-то текст</p>
+              <p class="card__source">Источник новости</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__bg"></div>
+            <div class="card__info">
+              <p class="card__date">20.12.1995</p>
+              <h2 class="card__title title">Заголовок</h2>
+              <p class="card__text">Какой-то текст</p>
+              <p class="card__source">Источник новости</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__bg"></div>
+            <div class="card__info">
+              <p class="card__date">20.12.1995</p>
+              <h2 class="card__title title">Заголовок</h2>
+              <p class="card__text">Какой-то текст</p>
+              <p class="card__source">Источник новости</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__bg"></div>
+            <div class="card__info">
+              <p class="card__date">20.12.1995</p>
+              <h2 class="card__title title">Заголовок</h2>
+              <p class="card__text">Какой-то текст</p>
+              <p class="card__source">Источник новости</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__bg"></div>
+            <div class="card__info">
+              <p class="card__date">20.12.1995</p>
+              <h2 class="card__title title">Заголовок</h2>
+              <p class="card__text">Какой-то текст</p>
+              <p class="card__source">Источник новости</p>
+            </div>
           </div>
         </div>
-        <div class="card">
-          <img
-            src="<%=require('../../images/cards/card_2.jpg')%>"
-            alt="Картинка результата поиска"
-            class="card__bg"
-          >
-          <div class="card__info">
-            <p class="card__date">20.12.1995</p>
-            <h2 class="card__title title">Заголовок</h2>
-            <p class="card__text">Какой-то текст</p>
-            <p class="card__source">Источник новости</p>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="<%=require('../../images/cards/card_3.jpg')%>"
-            alt="Картинка результата поиска"
-            class="card__bg"
-          >
-          <div class="card__info">
-            <p class="card__date">20.12.1995</p>
-            <h2 class="card__title title">Заголовок</h2>
-            <p class="card__text">Какой-то текст</p>
-            <p class="card__source">Источник новости</p>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="<%=require('../../images/cards/card_4.jpg')%>"
-            alt="Картинка результата поиска"
-            class="card__bg"
-          >
-          <div class="card__info">
-            <p class="card__date">20.12.1995</p>
-            <h2 class="card__title title">Заголовок</h2>
-            <p class="card__text">Какой-то текст</p>
-            <p class="card__source">Источник новости</p>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="<%=require('../../images/cards/card_5.jpg')%>"
-            alt="Картинка результата поиска"
-            class="card__bg"
-          >
-          <div class="card__info">
-            <p class="card__date">20.12.1995</p>
-            <h2 class="card__title title">Заголовок</h2>
-            <p class="card__text">Какой-то текст</p>
-            <p class="card__source">Источник новости</p>
-          </div>
-        </div>
-        <div class="card">
-          <img
-            src="<%=require('../../images/cards/card_6.jpg')%>"
-            alt="Картинка результата поиска"
-            class="card__bg"
-          >
-          <div class="card__info">
-            <p class="card__date">20.12.1995</p>
-            <h2 class="card__title title">Заголовок</h2>
-            <p class="card__text">Какой-то текст</p>
-            <p class="card__source">Источник новости</p>
-          </div>
-        </div>
+
+        <button class="button result-positive__btn result-positive__btn_hidden">Показать ещё</button>
       </div>
-
-      <button class="button result-positive__btn result-positive__btn_hidden">Показать ещё</button>
     </section>
 
     <section class="author">

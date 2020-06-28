@@ -4,3 +4,9 @@
 @import url(./__source/card__source.css);
 @import url(./__text/card__text.css);
 @import url(./__title/card__title.css);
+
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 5px 15px rgba(8, 29, 45, 0.1);
+}

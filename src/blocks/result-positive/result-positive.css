@@ -1,3 +1,11 @@
 @import url(./__title/result-positive__title.css);
 @import url(./__link/result-positive__link.css);
 @import url(./__btn/result-positive__btn.css);
+@import url(./__container/result-positive__container.css);
+@import url(./__header/result-positive__header.css);
+@import url(./__link-arrow/result-positive__link-arrow.css);
+
+.result-positive {
+  padding-top: 80px;
+  background: #F5F6F7;
+}

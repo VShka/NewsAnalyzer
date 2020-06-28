@@ -1,0 +1,6 @@
+.result-positive__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 65px;
+  position: relative;
+}
