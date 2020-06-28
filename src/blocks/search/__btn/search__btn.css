@@ -2,7 +2,9 @@
   width: 31%;
   min-height: 64px;
   background-color: #2F71E5;
+  box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
   color: #fff;
+  border-radius: 100px;
   position: absolute;
   top: 112px;
   right: -62px;

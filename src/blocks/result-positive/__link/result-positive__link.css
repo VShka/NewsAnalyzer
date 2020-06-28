@@ -1,4 +1,6 @@
 .result-positive__link {
+  display: block;
+  padding-right: 10px;
   align-self: center;
   font-style: normal;
   font-weight: 500;

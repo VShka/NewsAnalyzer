@@ -1,2 +1,13 @@
 @import url(./_hidden/result-positive__btn_hidden.css);
 
+.result-positive__btn {
+  width: 288px;
+  min-height: 64px;
+  background: #FFFFFF;
+  border-radius: 80px;
+  color: #1A1B22;
+}
+
+.result-positive__btn:hover {
+  opacity: .9;
+}
