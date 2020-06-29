@@ -38,9 +38,9 @@
   <main class="main">
     <section class="info">
       <div class="info__container">
-        <h1 class="title info__title">
+        <h2 class="title info__title">
           Клиентам
-        </h1>
+        </h2>
         <p class="info__text">
           Этот сайт — дипломный проект студента Яндекс.Практикума.
           Его цель — показать, чему научился студент, какими технологиями владеет.
@@ -68,6 +68,30 @@
           Проект был проверен экспертами Яндекс.Практикума.
           Если вашему бизнесу нужен сайт, мы рекомендуем обратиться к этому студенту.
         </p>
+      </div>
+    </section>
+
+    <section class="tech">
+      <div class="tech__container">
+        <h2 class="title tech__title">Используемые технологии</h2>
+        <div class="tech__list">
+          <div class="tech__item">
+            <h3 class="tech__name">HTML</h3>
+            <img src="../<%=require('../../images/tech/html.svg')%>" alt="HTML" class="tech__icon">
+          </div>
+          <div class="tech__item">
+            <h3 class="tech__name">CSS</h3>
+            <img src="../<%=require('../../images/tech/css.svg')%>" alt="CSS" class="tech__icon">
+          </div>
+          <div class="tech__item">
+            <h3 class="tech__name">JavaScript</h3>
+            <img src="../<%=require('../../images/tech/js.svg')%>" alt="JavaScript" class="tech__icon">
+          </div>
+          <div class="tech__item">
+            <h3 class="tech__name">Webpack</h3>
+            <img src="../<%=require('../../images/tech/webpack.svg')%>" alt="Webpack" class="tech__icon">
+          </div>
+        </div>
       </div>
     </section>
 

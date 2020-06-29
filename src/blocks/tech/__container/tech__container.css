@@ -1,0 +1,5 @@
+.tech__container {
+  display: grid;
+  grid-template-columns: 43vw 40vw;
+  justify-items: center;
+}
