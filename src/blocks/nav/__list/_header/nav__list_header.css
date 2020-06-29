@@ -1,0 +1,4 @@
+.nav__list_header {
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 17px;
+}

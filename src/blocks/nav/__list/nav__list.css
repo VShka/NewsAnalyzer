@@ -1,6 +1,7 @@
+@import url(./_header/nav__list_header.css);
+@import url(./_footer/nav__list_footer.css);
+
 .nav__list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 17px;
   margin: 0;
 }

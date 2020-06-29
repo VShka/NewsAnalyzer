@@ -1,11 +1,10 @@
 @import url(./_active/nav__link_active.css);
+@import url(./_white/nav__link_white.css);
+@import url(./_black/nav__link_black.css);
 
 .nav__link {
   font-style: normal;
-  font-weight: 500;
   font-size: 18px;
   line-height: 24px;
   text-decoration: none;
-  color: #fff;
-  padding-bottom: 25px;
 }

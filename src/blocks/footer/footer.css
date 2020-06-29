@@ -1,0 +1,9 @@
+@import url(./__copyright/footer__copyright.css);
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  min-height: 69px;
+  align-items: flex-end;
+  margin-bottom: 26px;
+}
