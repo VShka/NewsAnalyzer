@@ -18,8 +18,134 @@
   <title>Об авторе</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css%>">
 </head>
-<body>
-  <h1>Об авторе</h1>
-  <script src="<%= htmlWebpackPlugin.files.js %>"></script>  
+<body class="page">
+  <header class="header">
+    <div class="header__container">
+      <a href="./index.html" class="header__logo header__logo_black">NewsAnalyzer</a>
+      <nav class="nav">
+        <ul class="nav__list nav__list_header">
+          <li class="nav__item">
+            <a href="../main/index.html" class="nav__link nav__link_disabled">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a href="../about/index.html" class="nav__link nav__link_about-page nav__link_active">О проекте</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="info">
+      <div class="info__container">
+        <h1 class="title info__title">
+          Клиентам
+        </h1>
+        <p class="info__text">
+          Этот сайт — дипломный проект студента Яндекс.Практикума.
+          Его цель — показать, чему научился студент, какими технологиями владеет.
+        </p>
+        <p class="info__text">
+          Вёрстка сайта выполнена по методологии БЭМ.
+          Это делает сайт гибким и масштабируемым.
+          Кроме того, добавлять новые страницы и функциональность
+          проще и быстрее, чем в проектах, выполненных по другим методологиям.
+          Также сайт проще и дешевле поддерживать.
+        </p>
+        <p class="info__text">
+          Карточки с новостями приходят с сервера и обрабатываются асинхронно.
+          То есть сайт продолжает работать, пока от сервера приходит ответ.
+          Это повышает удобство использования сервиса.
+        </p>
+        <p class="info__text">
+          При создании проекта была использована сборка технологией Webpack.
+          Это современный подход к разработке сайтов. Код оптимизируется,
+          а значит, сайт работает быстрее. Также сайт работает в старых браузерах.
+          Даже если посетители — пользователи старых операционных систем,
+          у них не будет проблем с отображением. А значит, потенциальная аудитория возрастает.
+        </p>
+        <p class="info__text">
+          Проект был проверен экспертами Яндекс.Практикума.
+          Если вашему бизнесу нужен сайт, мы рекомендуем обратиться к этому студенту.
+        </p>
+      </div>
+    </section>
+
+    <section class="author">
+      <div class="author__info">
+        <img
+          src="../<%=require('../../images/avatars/me.png')%>"
+          alt="Аватарка автора"
+          class="author__avatar"
+        >
+        <div class="author__text-container">
+          <h2 class="author__title title">Об авторе</h2>
+          <p class="author__text">
+            Это блок с описанием автора проекта. Здесь следует указать,
+            как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
+          </p>
+          <p class="author__text">
+            Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились,
+            и чем можете помочь потенциальным заказчикам.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="footer">
+      <address class="footer__copyright">&copy; 2020 Шкарупа Виктор</address>
+
+      <nav class="nav">
+        <ul class="nav__list nav__list_footer">
+          <li class="nav__item">
+            <a href="./index.html" class="nav__link nav__link_black">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a href="../about/index.html" class="nav__link nav__link_black">О проекте</a>
+          </li>
+          <li class="nav__item">
+            <a href="https://praktikum.yandex.ru/" class="nav__link nav__link_black">Яндекс.Практикум</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="nav">
+        <ul class="nav__list nav__list_footer">
+          <li class="nav__item">
+            <a href="./index.html" class="nav__link">
+              <img
+                src="../<%=require('../../images/social/vk.svg')%>"
+                alt="Ссылка на Вконтакте"
+                class="nav__image"
+              >
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="../about/index.html" class="nav__link">
+              <img
+                src="../<%=require('../../images/social/github.svg')%>"
+                alt="Ссылка на ГитХаб"
+                class="nav__image"
+              >
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="https://praktikum.yandex.ru/" class="nav__link">
+              <img
+                src="../<%=require('../../images/social/fb.svg')%>"
+                alt="Ссылка на Фейсбук"
+                class="nav__image"
+              >
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+
+  </main>
+
+
+  <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
 </html>

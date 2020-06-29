@@ -1,0 +1,7 @@
+@import url(./__container/info__container.css);
+@import url(./__title/info__title.css);
+@import url(./__text/info__text.css);
+
+.info {
+  margin: 80px 0;
+}

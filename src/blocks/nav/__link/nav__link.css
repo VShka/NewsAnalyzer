@@ -1,10 +1,19 @@
 @import url(./_active/nav__link_active.css);
+@import url(./_disabled/nav__link_disabled.css);
 @import url(./_white/nav__link_white.css);
 @import url(./_black/nav__link_black.css);
+@import url(./_about-page/nav__link_about-page.css);
 
 .nav__link {
   font-style: normal;
   font-size: 18px;
   line-height: 24px;
   text-decoration: none;
+}
+
+.nav__link:hover {
+  opacity: .7;
+}
+.nav__link:active {
+  opacity: .3;
 }
