@@ -1,0 +1,5 @@
+@import url(./carousel-cell/carousel-cell.css);
+
+.carousel {
+  min-height: 288px;
+}

@@ -1,0 +1,11 @@
+@import url(./__text/commit__text.css);
+@import url(./__name-author/commit__name-author.css);
+@import url(./__info/commit__info.css);
+@import url(./__email-author/commit__email-author.css);
+@import url(./__data/commit__data.css);
+@import url(./__avatar/commit__avatar.css);
+@import url(./__author/commit__author.css);
+
+.commit {
+  margin-left: 30px;
+}

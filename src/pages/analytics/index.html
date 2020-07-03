@@ -18,8 +18,95 @@
   <title>Аналитика</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css%>">
 </head>
-<body>
-  <h1>Данные</h1>
-  <script src="<%= htmlWebpackPlugin.files.js %>"></script>  
+<body class="page">
+  <header class="header">
+    <div class="header__container">
+      <a href="../index.html" class="header__logo header__logo_black">NewsAnalyzer</a>
+      <nav class="nav">
+        <ul class="nav__list nav__list_header">
+          <li class="nav__item">
+            <a href="../index.html" class="nav__link nav__link_disabled">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a href="../about/index.html" class="nav__link nav__link_about-page nav__link_active">О проекте</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="info">
+      <div class="info__container">
+        <h2 class="title info__title">
+          Вы спросили: «Путешествия»
+        </h2>
+        <p class="info__text">
+          Новостей за неделю: 34 324
+        </p>
+        <p class="info__text">
+          Упоминаний в загаловках: 235
+        </p>
+      </div>
+    </section>
+
+    <section class="tech">
+      <h2>Аналитика по дням</h2>
+    </section>
+
+
+    <footer class="footer">
+      <address class="footer__copyright">&copy; 2020 Шкарупа Виктор</address>
+
+      <nav class="nav">
+        <ul class="nav__list nav__list_footer">
+          <li class="nav__item">
+            <a href="../index.html" class="nav__link nav__link_black">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a href="./about/index.html" class="nav__link nav__link_black">О проекте</a>
+          </li>
+          <li class="nav__item">
+            <a href="https://praktikum.yandex.ru/" class="nav__link nav__link_black">Яндекс.Практикум</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="nav">
+        <ul class="nav__list nav__list_footer">
+          <li class="nav__item">
+            <a href="https://vk.com/v_shka95" class="nav__link">
+              <img
+                src="../<%=require('../../images/social/vk.svg')%>"
+                alt="Ссылка на Вконтакте"
+                class="nav__image"
+              >
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="https://github.com/VShka" class="nav__link">
+              <img
+                src="../<%=require('../../images/social/github.svg')%>"
+                alt="Ссылка на ГитХаб"
+                class="nav__image"
+              >
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="https://www.facebook.com/profile.php?id=100007096356614" class="nav__link">
+              <img
+                src="../<%=require('../../images/social/fb.svg')%>"
+                alt="Ссылка на Фейсбук"
+                class="nav__image"
+              >
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+
+  </main>
+
+  <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
 </html>

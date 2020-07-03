@@ -59,7 +59,7 @@
         <h2 class="preloader__text">Идет поиск новостей...</h2>
       </section>
 
-      <section class="result-negative">
+      <section class="result-negative result-negative_hidden">
         <img
           src="<%=require('../../images/sadSmile.svg')%>"
           alt="Грустный смайл"
@@ -72,11 +72,13 @@
         </p>
       </section>
 
-      <section class="result-positive result-positive_hidden">
+      <section class="result-positive">
         <div class="result-positive__header">
           <h2 class="result-positive__title title">Результаты поиска</h2>
-          <a href="../analytics/index.html" class="result-positive__link">Посмотреть аналитику</a>
-          <img src="../../images/arrow.svg" alt="Перейти к аналитике" class="result-positive__link-arrow">
+          <a href="../analytics/index.html" class="result-positive__link">
+            Посмотреть аналитику
+            <img src="../../images/arrow.svg" alt="Перейти к аналитике" class="result-positive__link-arrow">
+          </a>
         </div>
 
         <div class="cards-grid">
@@ -207,7 +209,7 @@
       <nav class="nav">
         <ul class="nav__list nav__list_footer">
           <li class="nav__item">
-            <a href="./index.html" class="nav__link">
+            <a href="https://vk.com/v_shka95" class="nav__link">
               <img
                 src="<%=require('../../images/social/vk.svg')%>"
                 alt="Ссылка на Вконтакте"
@@ -216,7 +218,7 @@
             </a>
           </li>
           <li class="nav__item">
-            <a href="../about/index.html" class="nav__link">
+            <a href="https://github.com/VShka" class="nav__link">
               <img
                 src="<%=require('../../images/social/github.svg')%>"
                 alt="Ссылка на ГитХаб"
@@ -225,7 +227,7 @@
             </a>
           </li>
           <li class="nav__item">
-            <a href="https://praktikum.yandex.ru/" class="nav__link">
+            <a href="https://www.facebook.com/profile.php?id=100007096356614" class="nav__link">
               <img
                 src="<%=require('../../images/social/fb.svg')%>"
                 alt="Ссылка на Фейсбук"

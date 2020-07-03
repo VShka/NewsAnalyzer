@@ -1,0 +1,7 @@
+.github__header {
+  max-width: 83vw;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 65px;
+}
