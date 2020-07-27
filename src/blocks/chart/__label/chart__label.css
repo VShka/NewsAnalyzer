@@ -1,0 +1,6 @@
+@import url(./__label-item/chart__label-item.css);
+
+.chart__label {
+  padding-left: 0;
+  margin-top: 0;
+}

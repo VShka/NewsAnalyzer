@@ -1,0 +1,6 @@
+.chart__scale-container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 100px;
+  margin-bottom: 0;
+}

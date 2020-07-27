@@ -1,3 +1,7 @@
 .nav__link_disabled {
   color: #b6bcbf;
 }
+
+.nav__link_disabled:hover {
+  color: #1a1b22;
+}

@@ -28,7 +28,7 @@
             <a href="../index.html" class="nav__link nav__link_disabled">Главная</a>
           </li>
           <li class="nav__item">
-            <a href="../about/index.html" class="nav__link nav__link_about-page nav__link_active">О проекте</a>
+            <a href="../about/index.html" class="nav__link nav__link_disabled">О проекте</a>
           </li>
         </ul>
       </nav>
@@ -36,22 +36,90 @@
   </header>
 
   <main class="main">
-    <section class="info">
-      <div class="info__container">
-        <h2 class="title info__title">
+
+    <section class="analytics">
+      <div class="analytics__container">
+
+        <ul class="nav__path">
+          <li class="nav__item">
+            <a href="../index.html" class="nav__link nav__link_black">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a href="../analytics/index.html" class="nav__link nav__link_disabled">&nbsp;/ Аналитика</a>
+          </li>
+        </ul>
+
+        <h2 class="title analytics__title">
           Вы спросили: «Путешествия»
         </h2>
-        <p class="info__text">
-          Новостей за неделю: 34 324
+        <p class="analytics__text">
+          Новостей за неделю: <b>34 324</b>
         </p>
-        <p class="info__text">
-          Упоминаний в загаловках: 235
+        <p class="analytics__text">
+          Упоминаний в загаловках: <b>235</b>
         </p>
       </div>
     </section>
 
-    <section class="tech">
-      <h2>Аналитика по дням</h2>
+    <section class="graph">
+      <div class="graph__container">
+        <h2 class="title graph__title">Аналитика по дням</h2>
+
+        <div class="chart__container">
+          <div class="chart__topic">
+            <h4 class="chart__header">Дата</br>(Август)</h4>
+            <h4 class="chart__header">Кол-во упоминаний</h4>
+          </div>
+
+          <div class="chart__scale">
+            <ul class="chart__scale-container">
+              <li class="chart__scale-item">0</li>
+              <li class="chart__scale-item">25</li>
+              <li class="chart__scale-item">50</li>
+              <li class="chart__scale-item">75</li>
+              <li class="chart__scale-item">100</li>
+            </ul>
+          </div>
+
+
+          <div class="chart__content">
+            <ul class="chart__label">
+              <li class="chart__label-item">19, пн</li>
+              <li class="chart__label-item">20, вт</li>
+              <li class="chart__label-item">21, ср</li>
+              <li class="chart__label-item">22, чт</li>
+              <li class="chart__label-item">23, пт</li>
+              <li class="chart__label-item">24, сб</li>
+              <li class="chart__label-item">25, вс</li>
+            </ul>
+
+            <ul class="chart__value">
+              <li class="chart__value-item"><div class="chart__value-bar chart__value-bar_first">5</div></li>
+              <li class="chart__value-item"><div class="chart__value-bar chart__value-bar_second">18</div></li>
+              <li class="chart__value-item"><div class="chart__value-bar chart__value-bar_third">11</div></li>
+              <li class="chart__value-item"><div class="chart__value-bar chart__value-bar_fourth">39</div></li>
+              <li class="chart__value-item"><div class="chart__value-bar chart__value-bar_fifth">45</div></li>
+              <li class="chart__value-item"><div class="chart__value-bar chart__value-bar_sixth">73</div></li>
+              <li class="chart__value-item"><div class="chart__value-bar chart__value-bar_seventh">34</div></li>
+            </ul>
+          </div>
+
+
+          <div class="chart__scale">
+            <ul class="chart__scale-container">
+              <li class="chart__scale-item">0</li>
+              <li class="chart__scale-item">25</li>
+              <li class="chart__scale-item">50</li>
+              <li class="chart__scale-item">75</li>
+              <li class="chart__scale-item">100</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+
+
     </section>
 
 

@@ -1,0 +1,8 @@
+@import url(./__container/graph__container.css);
+@import url(./__title/graph__title.css);
+
+
+.graph {
+  padding: 65px 0 58px;
+  background-color: #f5f6f7;
+}

@@ -1,0 +1,7 @@
+@import url(./__value-item/chart__value-item.css);
+@import url(./__value-bar/chart__value-bar.css);
+
+.chart__value {
+  padding-left: 63px;
+  margin-top: 0;
+}
