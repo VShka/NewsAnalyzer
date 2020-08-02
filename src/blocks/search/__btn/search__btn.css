@@ -17,3 +17,22 @@
 .search__btn:active {
   background-color: #2A65CC;
 }
+
+@media (max-width: 1281px) {
+  .search__btn {
+    top: 136px;
+    right: -49px;
+  }
+}
+@media (max-width: 904px) {
+  .search__btn {
+    top: 160px;
+    right: -36px;
+  }
+}
+@media (max-width: 710px) {
+  .search__btn {
+    top: 184px;
+    right: -28px;
+  }
+}
