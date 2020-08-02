@@ -1,4 +1,4 @@
 .nav__list_footer {
-  grid-template-columns: 30% 30% 30%;
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 19px;
 }
