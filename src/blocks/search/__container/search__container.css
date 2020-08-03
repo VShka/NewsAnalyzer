@@ -2,3 +2,10 @@
   max-width: 41vw;
   margin: 83px auto 0;
 }
+
+@media(max-width: 768px) {
+  .search__container {
+    max-width: 57vw;
+    margin-bottom: 26px;
+  }
+}

@@ -12,3 +12,11 @@
   min-height: 575px;
   margin-top: -80px;
 }
+
+@media(max-width: 768px) {
+  .search {
+    background-image: url(../../images/bg_768px.png);
+    min-height: 400px;
+    margin-top: -65px;
+}
+}

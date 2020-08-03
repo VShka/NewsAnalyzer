@@ -3,3 +3,10 @@
   margin-top: 32px;
   position: relative;
 }
+
+@media(max-width: 768px) {
+  .search__form {
+    max-width: 57vw;
+    margin-top: 16px;
+  }
+}

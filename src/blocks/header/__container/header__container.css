@@ -1,6 +1,14 @@
 .header__container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
   max-width: 87vw;
   margin: 0 auto 25px;
+}
+
+@media(max-width: 768px) {
+  .header__container {
+    grid-template-columns: 2fr 1fr;
+    max-width: 94vw;
+    margin-bottom: 18px;
+  }
 }

@@ -30,9 +30,11 @@
     right: -36px;
   }
 }
-@media (max-width: 710px) {
+@media (max-width: 768px) {
   .search__btn {
-    top: 184px;
-    right: -28px;
+    width: 37%;
+    min-height: 56px;
+    top: 96px;
+    right: -19px;
   }
 }

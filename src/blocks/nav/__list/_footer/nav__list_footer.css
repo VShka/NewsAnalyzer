@@ -3,3 +3,9 @@
   grid-column-gap: 14px;
   text-align: center;
 }
+
+@media (max-width: 799px) {
+  .nav__list_footer {
+    grid-column-gap: 0px;
+  }
+}

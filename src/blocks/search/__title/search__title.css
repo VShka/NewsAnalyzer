@@ -6,3 +6,11 @@
   color: #fff;
   margin-bottom: 32px;
 }
+
+@media(max-width: 768px) {
+  .search__title {
+  max-width: 50%;
+  font-size: 36px;
+  line-height: 40px;
+  }
+}

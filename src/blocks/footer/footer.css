@@ -9,3 +9,14 @@
   min-height: 69px;
   align-items: flex-end;
 }
+
+@media (max-width: 865px) {
+  .footer {
+    grid-column-gap: 10px;
+  }
+}
+@media (max-width: 799px) {
+  .footer {
+    grid-column-gap: 0;
+  }
+}

@@ -2,3 +2,9 @@
   max-width: 1440px;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
+
+@media(max-width: 768px) {
+  .page {
+    max-width: 768px;
+  }
+}

@@ -3,3 +3,9 @@
   color: #fff;
   padding-bottom: 25px;
 }
+
+@media(max-width: 768px) {
+  .nav__link_white {
+    padding-bottom: 18px;
+  }
+}
