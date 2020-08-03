@@ -4,3 +4,9 @@
   margin-bottom: 65px;
   position: relative;
 }
+
+@media(max-width: 768px) {
+  .result-positive__header {
+    margin-bottom: 32px;
+  }
+}

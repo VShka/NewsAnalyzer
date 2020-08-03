@@ -9,3 +9,9 @@
 .result-positive {
   max-width: 86vw;
 }
+
+@media(max-width: 768px) {
+  .result-positive {
+    max-width: 90vw;
+  }
+}

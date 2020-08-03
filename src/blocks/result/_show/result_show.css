@@ -4,3 +4,9 @@
   padding: 80px 0;
   background-color: #f5f6f7;
 }
+
+@media(max-width: 768px) {
+  .result_show {
+    padding: 41px 0;
+  }
+}

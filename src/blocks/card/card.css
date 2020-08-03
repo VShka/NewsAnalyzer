@@ -11,3 +11,9 @@
   border-radius: 16px;
   box-shadow: 0px 5px 15px rgba(8, 29, 45, 0.1);
 }
+
+@media(max-width: 768px) {
+  .card {
+    max-width: 221px;
+  }
+}

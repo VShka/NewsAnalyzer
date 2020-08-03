@@ -7,3 +7,9 @@
   width: 23%;
   text-align: center;
 }
+
+@media(max-width: 768px) {
+  .result-negative {
+    width: 40%;
+  }
+}
