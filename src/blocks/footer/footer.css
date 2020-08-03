@@ -2,7 +2,7 @@
 
 .footer {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 3fr .1fr;
   grid-column-gap: 38px;
   max-width: 86vw;
   margin: 0 auto 26px;
@@ -10,13 +10,19 @@
   align-items: flex-end;
 }
 
-@media (max-width: 865px) {
+@media(max-width: 865px) {
   .footer {
     grid-column-gap: 10px;
   }
 }
-@media (max-width: 799px) {
+@media(max-width: 799px) {
   .footer {
     grid-column-gap: 0;
+  }
+}
+@media(max-width: 768px) {
+  .footer {
+    max-width: 90vw;
+    min-height: 60px;
   }
 }

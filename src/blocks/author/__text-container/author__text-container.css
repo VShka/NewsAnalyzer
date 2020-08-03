@@ -2,3 +2,10 @@
   max-width: 47vw;
   margin-top: 40px;
 }
+
+@media(max-width: 768px) {
+  .author__text-container {
+    max-width: 55vw;
+    margin-top: 0;
+  }
+}

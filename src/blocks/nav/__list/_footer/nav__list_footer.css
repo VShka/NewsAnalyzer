@@ -9,3 +9,8 @@
     grid-column-gap: 0px;
   }
 }
+@media(max-width: 768px) {
+  .nav__list_footer {
+    text-align: start;
+  }
+}

@@ -3,3 +3,11 @@
   grid-template-columns: repeat(2, 1fr);
   max-width: 86vw;
 }
+
+@media(max-width: 768px) {
+  .author__info {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    max-width: 90vw;
+  }
+}
