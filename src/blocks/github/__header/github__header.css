@@ -8,6 +8,7 @@
 
 @media(max-width: 768px) {
   .github__header {
-    margin-bottom: 40px;
+    max-width: 88vw;
+    margin: 10px auto 40px;
   }
 }
