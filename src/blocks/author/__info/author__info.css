@@ -8,6 +8,6 @@
   .author__info {
     display: grid;
     grid-template-columns: 2fr 3fr;
-    max-width: 90vw;
+    max-width: 88vw;
   }
 }

@@ -11,3 +11,9 @@
     margin: 0 auto;
   }
 }
+
+@media(max-width: 768px) {
+  .tech__container {
+    max-width: 88vw;
+  }
+}

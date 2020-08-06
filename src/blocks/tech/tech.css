@@ -9,3 +9,9 @@
   padding: 65px 0 83px;
   background-color: #f5f6f7;
 }
+
+@media(max-width: 768px) {
+  .tech {
+    padding: 40px 0;
+  }
+}
