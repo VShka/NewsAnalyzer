@@ -5,3 +5,9 @@
   margin: 0 auto;
   margin-bottom: 65px;
 }
+
+@media(max-width: 768px) {
+  .github__header {
+    margin-bottom: 40px;
+  }
+}

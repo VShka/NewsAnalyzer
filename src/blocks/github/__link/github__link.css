@@ -1,4 +1,6 @@
 .github__link {
+  display: flex;
+  align-self: center;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;

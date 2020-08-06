@@ -5,3 +5,9 @@
 .info {
   margin: 82px 0 94px;
 }
+
+@media(max-width: 768px) {
+  .info {
+    margin: 30px 0 57px;
+  }
+}

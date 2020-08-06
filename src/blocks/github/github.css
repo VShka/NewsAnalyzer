@@ -6,3 +6,9 @@
   padding: 74px 0 124px;
   background-color: #f5f6f7;
 }
+
+@media(max-width: 768px) {
+  .github {
+    padding: 40px 0 95px;
+  }
+}

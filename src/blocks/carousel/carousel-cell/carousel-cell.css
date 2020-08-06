@@ -7,5 +7,9 @@
   counter-increment: carousel-cell;
 }
 
-
+@media(max-width: 1030px) {
+  .carousel-cell {
+    width: 50%;
+  }
+}
 
