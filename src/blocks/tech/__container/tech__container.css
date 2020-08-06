@@ -1,5 +1,13 @@
 .tech__container {
+  max-width: 86vw;
   display: grid;
-  grid-template-columns: 43vw 40vw;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   justify-items: center;
+}
+
+@media(max-width: 930px) {
+  .tech__container {
+    display: block;
+    margin: 0 auto;
+  }
 }

@@ -13,6 +13,11 @@
   margin-top: -80px;
 }
 
+@media(max-width: 1300px) {
+  .search {
+    margin-top: -104px;
+  }
+}
 @media(max-width: 768px) {
   .search {
     background-image: url(../../images/bg_768px.png);
