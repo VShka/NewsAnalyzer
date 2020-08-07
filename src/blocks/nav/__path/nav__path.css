@@ -3,3 +3,9 @@
   padding: 0;
   margin-bottom: 80px;
 }
+
+@media(max-width: 768px) {
+  .nav__path {
+    margin-bottom: 64px;
+  }
+}

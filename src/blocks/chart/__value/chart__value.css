@@ -1,7 +1,22 @@
-@import url(./__value-item/chart__value-item.css);
-@import url(./__value-bar/chart__value-bar.css);
+@import url(./_first/chart__value-bar_first.css);
+@import url(./_second/chart__value-bar_second.css);
+@import url(./_third/chart__value-bar_third.css);
+@import url(./_fourth/chart__value-bar_fourth.css);
+@import url(./_fifth/chart__value-bar_fifth.css);
+@import url(./_sixth/chart__value-bar_sixth.css);
+@import url(./_seventh/chart__value-bar_seventh.css);
 
 .chart__value {
-  padding-left: 63px;
-  margin-top: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  color: #fff;
+  background-color: #2f71e5;
+  padding-left: 10px;
 }
+
+/* .chart__value:last-child {
+  margin-bottom: 0;
+} */

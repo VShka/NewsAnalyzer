@@ -1,0 +1,9 @@
+.chart__row {
+  display: flex;
+  padding-left: 0;
+  margin: 0 0 55px;
+}
+
+.chart__row:last-child {
+  margin-bottom: 0;
+}

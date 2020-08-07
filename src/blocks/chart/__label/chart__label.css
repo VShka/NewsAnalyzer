@@ -1,6 +1,9 @@
-@import url(./__label-item/chart__label-item.css);
-
 .chart__label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #1a1b22;
   padding-left: 0;
-  margin-top: 0;
+  margin-right: 52px;
 }
+

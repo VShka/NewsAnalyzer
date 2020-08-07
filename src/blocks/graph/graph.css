@@ -3,6 +3,12 @@
 
 
 .graph {
-  padding: 65px 0 58px;
+  padding: 80px 0 58px;
   background-color: #f5f6f7;
+}
+
+@media(max-width: 768px) {
+  .graph {
+    padding: 44px 0 20px;
+  }
 }
