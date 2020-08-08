@@ -15,8 +15,13 @@
   opacity: .3;
 }
 
-@media (max-width: 799px) {
+@media(max-width: 799px) {
   .nav__link {
     font-size: 16px;
+  }
+}
+@media(max-width: 320px) {
+  .nav__link {
+    font-size: 14px;
   }
 }

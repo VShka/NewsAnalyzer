@@ -1,0 +1,7 @@
+
+@media(max-width: 425px) {
+  .footer__menu {
+    grid-area: menu;
+    margin-bottom: 20px;
+  }
+}

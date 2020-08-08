@@ -12,3 +12,14 @@
     margin-bottom: 23px;
   }
 }
+@media(max-width: 425px) {
+  .cards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media(max-width: 375px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}

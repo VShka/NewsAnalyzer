@@ -11,9 +11,3 @@
 .result-positive__btn:hover {
   opacity: .9;
 }
-
-@media(max-width: 768px) {
-  .result-positive__btn {
-    width: 115%;
-  }
-}

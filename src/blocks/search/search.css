@@ -25,3 +25,26 @@
     margin-top: -65px;
 }
 }
+@media(max-width: 660px) {
+  .search {
+    margin-top: -90px;
+  }
+}
+@media(max-width: 425px) {
+  .search {
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+  }
+}
+@media(max-width: 375px) {
+  .search {
+    background-image: url(../../images/bg_325px.png);
+  }
+}
+@media(max-width: 320px) {
+  .search {
+    background-position-x: inherit;
+    margin-top: -60px;
+  }
+}

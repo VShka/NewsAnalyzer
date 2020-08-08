@@ -1,4 +1,6 @@
 @import url(./__copyright/footer__copyright.css);
+@import url(./__menu/footer__menu.css);
+@import url(./__social/footer__social.css);
 
 .footer {
   display: grid;
@@ -24,5 +26,20 @@
   .footer {
     max-width: 90vw;
     min-height: 60px;
+  }
+}
+@media(max-width: 425px) {
+  .footer {
+    grid-template-columns: 1fr .6fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'menu social'
+      'copy .';
+    margin: 0 0 20px;
+  }
+}
+@media(max-width: 320px) {
+  .footer {
+    max-width: 100vw;
   }
 }

@@ -19,6 +19,21 @@
   .header__container {
     grid-template-columns: 2fr 1fr;
     max-width: 94vw;
-    margin-bottom: 18px;
+    margin: 0 auto 18px;
+  }
+}
+@media(max-width: 425px) {
+  .header__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media(max-width: 375px) {
+  .header__container {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+@media(max-width: 320px) {
+  .header__container {
+    max-width: 95vw;
   }
 }

@@ -1,0 +1,11 @@
+@media(max-width: 425px) {
+  .nav__list_social {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media(max-width: 320px) {
+  .nav__list_social {
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
+  }
+}

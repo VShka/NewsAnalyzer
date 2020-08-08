@@ -10,3 +10,8 @@
     padding: 41px 0;
   }
 }
+@media(max-width: 320px) {
+  .result_show {
+    padding: 32px 0;
+  }
+}

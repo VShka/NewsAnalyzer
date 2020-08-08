@@ -38,3 +38,10 @@
     right: -19px;
   }
 }
+@media(max-width: 425px) {
+  .search__btn {
+    position: static;
+    width: 104%;
+    margin-top: 15px;
+  }
+}

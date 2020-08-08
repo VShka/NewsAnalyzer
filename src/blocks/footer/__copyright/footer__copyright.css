@@ -11,3 +11,9 @@
     font-size: 12px;
   }
 }
+@media(max-width: 425px) {
+  .footer__copyright {
+    grid-area: copy;
+    margin-left: 40px;
+  }
+}

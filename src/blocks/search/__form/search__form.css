@@ -10,3 +10,8 @@
     margin-top: 16px;
   }
 }
+@media(max-width: 320px) {
+  .search__form {
+    max-width: 82vw;
+  }
+}

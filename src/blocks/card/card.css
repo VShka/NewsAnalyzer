@@ -17,3 +17,8 @@
     max-width: 221px;
   }
 }
+@media(max-width: 375px) {
+  .card {
+    max-width: 288px;
+  }
+}

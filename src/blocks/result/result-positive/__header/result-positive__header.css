@@ -10,3 +10,8 @@
     margin-bottom: 32px;
   }
 }
+@media(max-width: 425px) {
+  .result-positive__header {
+    display: block;
+  }
+}

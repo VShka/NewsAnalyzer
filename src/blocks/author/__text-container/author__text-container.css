@@ -9,3 +9,8 @@
     margin-top: 0;
   }
 }
+@media(max-width: 425px) {
+  .author__text-container {
+    max-width: 100vw;
+  }
+}

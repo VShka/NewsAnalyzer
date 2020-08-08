@@ -12,3 +12,8 @@
     background-repeat: no-repeat;
   }
 }
+@media(max-width: 375px) {
+  .card__bg {
+    height: 196px;
+  }
+}

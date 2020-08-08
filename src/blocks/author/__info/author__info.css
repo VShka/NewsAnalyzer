@@ -6,8 +6,19 @@
 
 @media(max-width: 768px) {
   .author__info {
-    display: grid;
     grid-template-columns: 2fr 3fr;
     max-width: 88vw;
+  }
+}
+@media(max-width: 425px) {
+  .author__info {
+    grid-template-columns: 1fr;
+    max-width: 70vw;
+  }
+}
+@media(max-width: 320px) {
+  .author__info {
+    max-width: 90vw;
+    justify-items: center;
   }
 }

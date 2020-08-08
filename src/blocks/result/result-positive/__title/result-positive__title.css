@@ -12,3 +12,9 @@
     line-height: 34px;
   }
 }
+@media(max-width: 425px) {
+  .result-positive__title {
+    max-width: 50%;
+    margin-bottom: 25px;
+  }
+}
