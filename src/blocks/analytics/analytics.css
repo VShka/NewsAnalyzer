@@ -12,3 +12,8 @@
     margin: 32px 0 40px;
   }
 }
+@media(max-width: 320px) {
+  .analytics {
+    margin: 16px 0 24px;
+  }
+}

@@ -9,3 +9,8 @@
     margin-bottom: 64px;
   }
 }
+@media(max-width: 320px) {
+  .nav__path {
+    display: none;
+  }
+}

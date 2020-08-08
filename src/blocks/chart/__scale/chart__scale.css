@@ -4,3 +4,9 @@
 .chart__scale {
   margin-left: 101px;
 }
+
+@media(max-width: 320px) {
+  .chart__scale {
+    display: none;
+  }
+}

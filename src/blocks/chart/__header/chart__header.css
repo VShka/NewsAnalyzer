@@ -8,3 +8,9 @@
   color: #b6bcbf;
   margin: 47px 50px 7px 0;
 }
+
+@media(max-width: 320px) {
+  .chart__header {
+    margin: 16px 20px 8px 4px;
+  }
+}
