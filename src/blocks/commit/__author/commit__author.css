@@ -2,3 +2,9 @@
   display: grid;
   grid-template-columns: .3fr 1fr;
 }
+
+@media(max-width: 320px) {
+  .commit__author {
+    grid-template-columns: .4fr 1fr;
+  }
+}

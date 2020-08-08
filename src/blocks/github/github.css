@@ -12,3 +12,11 @@
     padding: 40px 0 95px;
   }
 }
+
+@media(max-width: 320px) {
+  .github {
+    position: relative;
+    padding: 40px 0 130px;
+    margin-bottom: 20px;
+  }
+}

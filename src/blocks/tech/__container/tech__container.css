@@ -17,3 +17,8 @@
     max-width: 88vw;
   }
 }
+@media(max-width: 320px) {
+  .tech__container {
+    max-width: 92vw;
+  }
+}

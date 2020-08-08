@@ -12,4 +12,8 @@
     width: 50%;
   }
 }
-
+@media(max-width: 320px) {
+  .carousel-cell {
+    width: 89%;
+  }
+}

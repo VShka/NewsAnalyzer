@@ -1,5 +1,5 @@
 @media(max-width: 320px) {
-  .result-positive__link-arrow {
+  .flickity-button {
     display: none;
   }
 }

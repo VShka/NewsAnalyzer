@@ -9,3 +9,9 @@
 .commit {
   margin-left: 30px;
 }
+
+@media(max-width: 320px) {
+  .commit {
+    margin-left: 15px;
+  }
+}
