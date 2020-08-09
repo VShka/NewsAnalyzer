@@ -22,6 +22,16 @@
     margin: 0 auto 18px;
   }
 }
+@media(max-width: 614px) {
+  .header__container {
+    grid-template-columns: minmax(200px, 60%) 1fr;
+  }
+}
+@media(max-width: 513px) {
+  .header__container {
+    grid-template-columns: minmax(200px, 50%) 1fr;
+  }
+}
 @media(max-width: 425px) {
   .header__container {
     grid-template-columns: 1fr 1fr;

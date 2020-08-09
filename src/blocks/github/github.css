@@ -1,6 +1,7 @@
 @import url(./__header/github__header.css);
 @import url(./__link/github__link.css);
 @import url(./__title/github__title.css);
+@import url(./__link-arrow/github__link-arrow.css);
 
 .github {
   padding: 74px 0 124px;
@@ -12,11 +13,14 @@
     padding: 40px 0 95px;
   }
 }
-
-@media(max-width: 320px) {
+@media(max-width: 450px) {
   .github {
-    position: relative;
-    padding: 40px 0 130px;
     margin-bottom: 20px;
+    position: relative;
+  }
+}
+@media(max-width: 405px) {
+  .github {
+    padding: 40px 0 130px;
   }
 }

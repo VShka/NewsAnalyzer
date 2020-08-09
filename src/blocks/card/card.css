@@ -17,8 +17,13 @@
     max-width: 221px;
   }
 }
-@media(max-width: 375px) {
+@media(max-width: 425px) {
   .card {
-    max-width: 288px;
+    max-width: 300px;
+  }
+}
+@media(max-width: 320px) {
+  .card {
+    max-width: 250px;
   }
 }

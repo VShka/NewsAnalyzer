@@ -14,7 +14,12 @@
   line-height: 40px;
   }
 }
-@media(max-width: 425px) {
+@media(max-width: 650px) {
+  .search__title {
+    max-width: 70%;
+  }
+}
+@media(max-width: 513px) {
   .search__title {
     max-width: 100%;
   }

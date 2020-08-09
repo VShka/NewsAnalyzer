@@ -38,6 +38,18 @@
     right: -19px;
   }
 }
+@media(max-width: 603px) {
+  .search__btn {
+    top: 120px;
+    right: -15px;
+  }
+}
+@media(max-width: 473px) {
+  .search__btn {
+    top: 144px;
+    right: -11px;
+  }
+}
 @media(max-width: 425px) {
   .search__btn {
     position: static;

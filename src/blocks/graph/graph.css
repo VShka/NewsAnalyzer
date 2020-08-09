@@ -12,6 +12,11 @@
     padding: 44px 0 20px;
   }
 }
+@media(max-width: 600px) {
+  .graph {
+    margin-bottom: 20px;
+  }
+}
 @media(max-width: 320px) {
   .graph {
     margin-bottom: 20px;

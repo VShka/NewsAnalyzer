@@ -3,6 +3,7 @@
 @import url(./_social/nav__list_social.css);
 
 .nav__list {
-  display: grid;
+  display: flex;
+  padding-left: 0;
   margin: 0;
 }

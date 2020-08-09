@@ -1,0 +1,5 @@
+@media(max-width: 405px) {
+  .github__link-arrow {
+    display: none;
+  }
+}

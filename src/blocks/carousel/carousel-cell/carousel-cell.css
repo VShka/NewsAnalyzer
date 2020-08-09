@@ -12,7 +12,17 @@
     width: 50%;
   }
 }
-@media(max-width: 320px) {
+@media(max-width: 600px) {
+  .carousel-cell {
+    width: 60%;
+  }
+}
+@media(max-width: 470px) {
+  .carousel-cell {
+    width: 70%;
+  }
+}
+@media(max-width: 405px) {
   .carousel-cell {
     width: 89%;
   }

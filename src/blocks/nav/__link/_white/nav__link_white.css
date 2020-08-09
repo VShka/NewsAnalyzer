@@ -9,3 +9,8 @@
     padding-bottom: 18px;
   }
 }
+@media(max-width: 650px) {
+  .nav__link_white {
+    padding-bottom: 20px;
+  }
+}

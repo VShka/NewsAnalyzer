@@ -12,8 +12,13 @@
     background-repeat: no-repeat;
   }
 }
-@media(max-width: 375px) {
+@media(max-width: 425px) {
   .card__bg {
-    height: 196px;
+    height: 204px;
+  }
+}
+@media(max-width: 320px) {
+  .card__bg {
+    height: 170px;
   }
 }

@@ -1,7 +1,10 @@
-
-@media(max-width: 425px) {
+@media(max-width: 650px) {
   .footer__menu {
     grid-area: menu;
+  }
+}
+@media(max-width: 425px) {
+  .footer__menu {
     margin-bottom: 20px;
   }
 }

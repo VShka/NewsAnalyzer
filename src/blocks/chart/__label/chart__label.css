@@ -7,7 +7,7 @@
   margin-right: 52px;
 }
 
-@media(max-width: 320px) {
+@media(max-width: 467px) {
   .chart__label {
     margin-right: 12px;
   }

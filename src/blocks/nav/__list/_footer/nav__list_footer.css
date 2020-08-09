@@ -1,27 +1,9 @@
 .nav__list_footer {
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 14px;
-  text-align: center;
+  justify-content: space-around;
 }
 
-@media (max-width: 799px) {
+@media(max-width: 450px) {
   .nav__list_footer {
-    grid-column-gap: 0px;
-  }
-}
-@media(max-width: 768px) {
-  .nav__list_footer {
-    text-align: start;
-  }
-}
-@media(max-width: 425px) {
-  .nav__list_footer {
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-  }
-}
-@media(max-width: 320px) {
-  .nav__list_footer {
-    grid-gap: 10px;
+    flex-direction: column;
   }
 }

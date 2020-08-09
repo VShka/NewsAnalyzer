@@ -1,8 +1,16 @@
 
-
-@media(max-width: 425px) {
+@media(max-width: 650px) {
   .footer__social {
     grid-area: social;
+  }
+}
+@media(max-width: 450px) {
+  .footer__social {
+    justify-self: end;
+  }
+}
+@media(max-width: 425px) {
+  .footer__social {
     align-self: baseline;
   }
 }

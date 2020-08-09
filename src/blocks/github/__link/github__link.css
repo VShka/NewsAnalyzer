@@ -9,16 +9,21 @@
   text-decoration: none;
 }
 
-@media(max-width: 320px) {
+@media(max-width: 405px) {
   .github__link {
     display: block;
     position: absolute;
     bottom: 25px;
-    left: 15px;
+    left: calc(80% - 230px);
     background-color: #f5f6f7;
     color: #1a1b22;
-    padding: 1rem 4.4rem;
+    padding: 15px 40px;
     border: 1px solid #1a1b22;
     border-radius: 40px;
+  }
+}
+@media(max-width: 320px) {
+  .github__link {
+    left: calc(80% - 208px);
   }
 }
