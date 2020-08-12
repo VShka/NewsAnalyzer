@@ -54,123 +54,86 @@
       </div>
     </section>
 
-    <section class="result result_show">
+    <section class="result result_hidden">
+      <div class="result__container">
+        <section class="preloader preloader_hidden">
+          <i class="preloader__circle"></i>
+          <h2 class="preloader__text">Идет поиск новостей...</h2>
+        </section>
 
-      <section class="preloader preloader_hidden">
-        <i class="preloader__circle"></i>
-        <h2 class="preloader__text">Идет поиск новостей...</h2>
-      </section>
+        <section class="result-negative result-negative_hidden">
+          <img
+            src="<%=require('../../images/sadSmile.svg')%>"
+            alt="Грустный смайл"
+            class="result-negative__image"
+          >
+          <h3 class="result-negative__title title">Ничего не найдено</h3>
+          <p class="result-negative__text">
+            К сожалению по вашему запросу
+            ничего не найдено.
+          </p>
+        </section>
 
-      <section class="result-negative result-negative_hidden">
-        <img
-          src="<%=require('../../images/sadSmile.svg')%>"
-          alt="Грустный смайл"
-          class="result-negative__image"
-        >
-        <h3 class="result-negative__title title">Ничего не найдено</h3>
-        <p class="result-negative__text">
-          К сожалению по вашему запросу
-          ничего не найдено.
-        </p>
-      </section>
+        <section class="result-positive">
+          <div class="result-positive__header">
+            <h2 class="result-positive__title title">Результаты поиска</h2>
+            <a href="./analytics/index.html" class="result-positive__link">
+              Посмотреть аналитику
+              <img
+                src="<%=require('../../images/arrow.svg')%>"
+                alt="Перейти к аналитике"
+                class="result-positive__link-arrow"
+              >
+            </a>
+          </div>
 
-      <section class="result-positive">
-        <div class="result-positive__header">
-          <h2 class="result-positive__title title">Результаты поиска</h2>
-          <a href="./analytics/index.html" class="result-positive__link">
-            Посмотреть аналитику
-            <img
-              src="<%=require('../../images/arrow.svg')%>"
-              alt="Перейти к аналитике"
-              class="result-positive__link-arrow"
-            >
-          </a>
-        </div>
+          <div class="cards-grid">
+            <div class="card">
+              <div class="card__bg"></div>
+              <div class="card__info">
+                <p class="card__date">2 августа, 2019</p>
+                <h2 class="card__title title">Национальное достояние – парки</h2>
+                <p class="card__text">
+                  В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
+                  начала складываться система национальных парков – охраняемых территорий,
+                  где и сегодня каждый может приобщиться к природе.
+                </p>
+                <p class="card__source">Источник новости</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__bg"></div>
+              <div class="card__info">
+                <p class="card__date">2 августа, 2019</p>
+                <h2 class="card__title title">Национальное достояние – парки</h2>
+                <p class="card__text">
+                  В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
+                  начала складываться система национальных парков – охраняемых территорий,
+                  где и сегодня каждый может приобщиться к природе.
+                </p>
+                <p class="card__source">Источник новости</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__bg"></div>
+              <div class="card__info">
+                <p class="card__date">2 августа, 2019</p>
+                <h2 class="card__title title">Национальное достояние – парки</h2>
+                <p class="card__text">
+                  В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
+                  начала складываться система национальных парков – охраняемых территорий,
+                  где и сегодня каждый может приобщиться к природе.
+                </p>
+                <p class="card__source">Источник новости</p>
+              </div>
+            </div>
+          </div>
+          <div class="button__container">
+            <button class="button result-positive__btn" type="button">Показать ещё</button>
+          </div>
+        </section>
+      </div>
 
-        <div class="cards-grid">
-          <div class="card">
-            <div class="card__bg"></div>
-            <div class="card__info">
-              <p class="card__date">2 августа, 2019</p>
-              <h2 class="card__title title">Национальное достояние – парки</h2>
-              <p class="card__text">
-                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
-                начала складываться система национальных парков – охраняемых территорий,
-                где и сегодня каждый может приобщиться к природе.
-              </p>
-              <p class="card__source">Источник новости</p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card__bg"></div>
-            <div class="card__info">
-              <p class="card__date">2 августа, 2019</p>
-              <h2 class="card__title title">Национальное достояние – парки</h2>
-              <p class="card__text">
-                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
-                начала складываться система национальных парков – охраняемых территорий,
-                где и сегодня каждый может приобщиться к природе.
-              </p>
-              <p class="card__source">Источник новости</p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card__bg"></div>
-            <div class="card__info">
-              <p class="card__date">2 августа, 2019</p>
-              <h2 class="card__title title">Национальное достояние – парки</h2>
-              <p class="card__text">
-                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
-                начала складываться система национальных парков – охраняемых территорий,
-                где и сегодня каждый может приобщиться к природе.
-              </p>
-              <p class="card__source">Источник новости</p>
-            </div>
-          </div>
-          <!-- <div class="card">
-            <div class="card__bg"></div>
-            <div class="card__info">
-              <p class="card__date">2 августа, 2019</p>
-              <h2 class="card__title title">Национальное достояние – парки</h2>
-              <p class="card__text">
-                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
-                начала складываться система национальных парков – охраняемых территорий,
-                где и сегодня каждый может приобщиться к природе.
-              </p>
-              <p class="card__source">Источник новости</p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card__bg"></div>
-            <div class="card__info">
-              <p class="card__date">2 августа, 2019</p>
-              <h2 class="card__title title">Национальное достояние – парки</h2>
-              <p class="card__text">
-                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
-                начала складываться система национальных парков – охраняемых территорий,
-                где и сегодня каждый может приобщиться к природе.
-              </p>
-              <p class="card__source">Источник новости</p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card__bg"></div>
-            <div class="card__info">
-              <p class="card__date">2 августа, 2019</p>
-              <h2 class="card__title title">Национальное достояние – парки</h2>
-              <p class="card__text">
-                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
-                начала складываться система национальных парков – охраняемых территорий,
-                где и сегодня каждый может приобщиться к природе.
-              </p>
-              <p class="card__source">Источник новости</p>
-            </div>
-          </div> -->
-        </div>
-        <div class="button__container">
-          <button class="button result-positive__btn" type="button">Показать ещё</button>
-        </div>
-      </section>
     </section>
 
     <section class="author">
