@@ -1,0 +1,22 @@
+.search__container {
+  max-width: 41vw;
+  margin: 83px auto 0;
+}
+
+@media(max-width: 768px) {
+  .search__container {
+    max-width: 57vw;
+    margin-bottom: 26px;
+  }
+}
+@media(max-width: 425px) {
+  .search__container {
+    margin: 120px auto 50px;
+  }
+}
+@media(max-width: 320px) {
+  .search__container {
+    max-width: 87vw;
+    margin: 87px auto 50px;
+  }
+}

@@ -1,0 +1,14 @@
+.author__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1a1b22;
+  margin-top: 24px;
+}
+
+@media(max-width: 768px) {
+  .author__text {
+    margin-top: 6px;
+  }
+}

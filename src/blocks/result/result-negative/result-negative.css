@@ -1,0 +1,15 @@
+@import url(./__image/result-negative__image.css);
+@import url(./__text/result-negative__text.css);
+@import url(./__title/result-negative__title.css);
+@import url(./_hidden/result-negative_hidden.css);
+
+.result-negative {
+  width: 23%;
+  text-align: center;
+}
+
+@media(max-width: 768px) {
+  .result-negative {
+    width: 40%;
+  }
+}

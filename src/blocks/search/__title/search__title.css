@@ -1,0 +1,26 @@
+.search__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 64px;
+  color: #fff;
+  margin-bottom: 32px;
+}
+
+@media(max-width: 768px) {
+  .search__title {
+  max-width: 50%;
+  font-size: 36px;
+  line-height: 40px;
+  }
+}
+@media(max-width: 650px) {
+  .search__title {
+    max-width: 70%;
+  }
+}
+@media(max-width: 513px) {
+  .search__title {
+    max-width: 100%;
+  }
+}

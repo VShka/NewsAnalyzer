@@ -1,0 +1,19 @@
+@import url(./__container/analytics__container.css);
+@import url(./__text/analytics__text.css);
+@import url(./__title/analytics__title.css);
+
+
+.analytics {
+  margin: 40px 0 85px;
+}
+
+@media(max-width: 768px) {
+  .analytics {
+    margin: 32px 0 40px;
+  }
+}
+@media(max-width: 320px) {
+  .analytics {
+    margin: 16px 0 24px;
+  }
+}

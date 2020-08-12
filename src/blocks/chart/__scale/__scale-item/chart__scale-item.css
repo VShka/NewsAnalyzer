@@ -1,0 +1,16 @@
+@import url(./_zero/chart__scale-item_zero.css);
+@import url(./_quarter/chart__scale-item_quarter.css);
+@import url(./_half/chart__scale-item_half.css);
+@import url(./_three-quarters/chart__scale-item_three-quarters.css);
+@import url(./_full/chart__scale-item_full.css);
+
+.chart__scale-item {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #b6bcbf;
+}

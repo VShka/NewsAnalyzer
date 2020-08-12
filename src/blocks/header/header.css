@@ -1,0 +1,21 @@
+@import url(./__logo/header__logo.css);
+@import url(./__container/header__container.css);
+
+.header {
+  width: 100%;
+  border-bottom: 1px solid #c4c4c4;
+  margin-top: 30px;
+  position: relative;
+}
+
+
+@media(max-width: 768px) {
+  .header {
+    margin-top: 22px;
+  }
+}
+@media(max-width: 320px) {
+  .header {
+    margin-top: 16px;
+  }
+}

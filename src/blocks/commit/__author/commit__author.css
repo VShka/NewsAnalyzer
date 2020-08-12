@@ -1,0 +1,20 @@
+.commit__author {
+  display: grid;
+  grid-template-columns: .3fr 1fr;
+}
+
+@media(max-width: 1200px) {
+  .commit__author {
+    grid-template-columns: .4fr 1fr;
+  }
+}
+@media(max-width: 1030px) {
+  .commit__author {
+    grid-template-columns: .2fr 1fr;
+  }
+}
+@media(max-width: 320px) {
+  .commit__author {
+    grid-template-columns: .4fr 1fr;
+  }
+}

@@ -1,0 +1,14 @@
+.chart__label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #1a1b22;
+  padding-left: 0;
+  margin-right: 52px;
+}
+
+@media(max-width: 467px) {
+  .chart__label {
+    margin-right: 12px;
+  }
+}

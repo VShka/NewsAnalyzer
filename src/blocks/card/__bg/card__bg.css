@@ -1,0 +1,24 @@
+.card__bg {
+  height: 272px;
+  background-image: url(../../../images/cards/card_1.jpg);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+@media(max-width: 768px) {
+  .card__bg {
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+@media(max-width: 425px) {
+  .card__bg {
+    height: 204px;
+  }
+}
+@media(max-width: 320px) {
+  .card__bg {
+    height: 170px;
+  }
+}

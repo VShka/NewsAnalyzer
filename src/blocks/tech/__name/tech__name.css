@@ -1,0 +1,15 @@
+.tech__name {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1a1b22;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media(max-width: 768px) {
+  .tech__name {
+    margin-top: 27px;
+  }
+}

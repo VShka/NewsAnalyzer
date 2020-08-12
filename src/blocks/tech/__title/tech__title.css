@@ -1,0 +1,17 @@
+.tech__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  color: #1a1b22;
+  max-width: 28vw;
+  margin-top: 18px;
+}
+
+@media(max-width: 768px) {
+  .tech__title {
+    font-size: 30px;
+    line-height: 34px;
+    margin-top: 5px;
+  }
+}

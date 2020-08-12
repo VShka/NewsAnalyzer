@@ -1,0 +1,11 @@
+.nav__link_about-page {
+  color: #1a1b22;
+  font-weight: 500;
+  padding-bottom: 25px;
+}
+
+@media(max-width: 768px) {
+  .nav__link_about-page {
+    padding-bottom: 20px;
+  }
+}

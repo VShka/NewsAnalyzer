@@ -1,0 +1,15 @@
+.chart__row {
+  display: flex;
+  padding-left: 0;
+  margin: 0 0 55px;
+}
+
+.chart__row:last-child {
+  margin-bottom: 0;
+}
+
+@media(max-width: 320px) {
+  .chart__row {
+    margin: 0 0 25px;
+  }
+}

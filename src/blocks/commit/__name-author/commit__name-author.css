@@ -1,0 +1,15 @@
+.commit__name-author {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  color: #1a1b22;
+  margin: 0;
+}
+
+@media(max-width: 1199px) {
+  .commit__name-author {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

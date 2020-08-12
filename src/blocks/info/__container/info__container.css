@@ -1,0 +1,10 @@
+.info__container {
+  max-width: 84vw;
+  margin: 0 auto;
+}
+
+@media(max-width: 768px) {
+  .info__container {
+    max-width: 88vw;
+  }
+}

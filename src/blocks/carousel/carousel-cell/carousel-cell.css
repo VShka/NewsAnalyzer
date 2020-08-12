@@ -1,0 +1,29 @@
+.carousel-cell {
+  width: 27%;
+  min-height: 288px;
+  margin-right: 10px;
+  background: #fff;
+  border-radius: 16px;
+  counter-increment: carousel-cell;
+}
+
+@media(max-width: 1030px) {
+  .carousel-cell {
+    width: 50%;
+  }
+}
+@media(max-width: 600px) {
+  .carousel-cell {
+    width: 60%;
+  }
+}
+@media(max-width: 470px) {
+  .carousel-cell {
+    width: 70%;
+  }
+}
+@media(max-width: 405px) {
+  .carousel-cell {
+    width: 89%;
+  }
+}

@@ -1,0 +1,9 @@
+.card__source {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  color: #B6BCBF;
+}

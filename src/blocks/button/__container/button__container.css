@@ -1,0 +1,26 @@
+.button__container {
+  width: 29%;
+  margin: 0 auto;
+}
+
+@media(max-width: 768px) {
+  .button__container {
+    width: 35%;
+  }
+}
+@media(max-width: 650px) {
+  .button__container {
+    width: 55%;
+  }
+}
+@media(max-width: 425px) {
+  .button__container {
+    width: 60%;
+  }
+}
+@media(max-width: 320px) {
+  .button__container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

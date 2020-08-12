@@ -1,0 +1,20 @@
+.result-positive__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  color: #1A1B22;
+}
+
+@media(max-width: 768px) {
+  .result-positive__title {
+    font-size: 30px;
+    line-height: 34px;
+  }
+}
+@media(max-width: 425px) {
+  .result-positive__title {
+    max-width: 50%;
+    margin-bottom: 25px;
+  }
+}

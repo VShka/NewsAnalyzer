@@ -1,0 +1,11 @@
+@import url(./__container/button__container.css);
+
+.button {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

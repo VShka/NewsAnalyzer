@@ -1,0 +1,25 @@
+.github__title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  color: #1a1b22;
+}
+
+@media(max-width: 850px) {
+  .github__title {
+    max-width: 50vw;
+  }
+}
+@media(max-width: 768px) {
+  .github__title {
+    font-size: 30px;
+    line-height: 34px;
+  }
+}
+@media(max-width: 405px) {
+  .github__title {
+    max-width: 90vw;
+    line-height: 40px;
+  }
+}

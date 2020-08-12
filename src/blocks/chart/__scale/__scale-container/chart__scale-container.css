@@ -1,0 +1,6 @@
+.chart__scale-container {
+  display: grid;
+  grid-template-columns: 0% 25% 25% 25% 25%;
+  justify-items: flex-end;
+  padding-left: 0;
+}

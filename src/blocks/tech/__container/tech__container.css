@@ -1,0 +1,24 @@
+.tech__container {
+  max-width: 86vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-items: center;
+}
+
+@media(max-width: 930px) {
+  .tech__container {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media(max-width: 768px) {
+  .tech__container {
+    max-width: 88vw;
+  }
+}
+@media(max-width: 320px) {
+  .tech__container {
+    max-width: 92vw;
+  }
+}

@@ -1,0 +1,16 @@
+.nav__link_white {
+  font-weight: 500;
+  color: #fff;
+  padding-bottom: 25px;
+}
+
+@media(max-width: 768px) {
+  .nav__link_white {
+    padding-bottom: 18px;
+  }
+}
+@media(max-width: 650px) {
+  .nav__link_white {
+    padding-bottom: 20px;
+  }
+}

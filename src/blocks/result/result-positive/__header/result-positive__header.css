@@ -1,0 +1,21 @@
+.result-positive__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 65px;
+}
+
+@media(max-width: 768px) {
+  .result-positive__header {
+    margin-bottom: 32px;
+  }
+}
+@media(max-width: 650px) {
+  .result-positive__header {
+    display: block;
+  }
+}
+@media(max-width: 320px) {
+  .result-positive__header {
+    max-width: 78vw;
+  }
+}

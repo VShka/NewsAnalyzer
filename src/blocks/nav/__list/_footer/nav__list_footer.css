@@ -1,0 +1,9 @@
+.nav__list_footer {
+  justify-content: space-around;
+}
+
+@media(max-width: 450px) {
+  .nav__list_footer {
+    flex-direction: column;
+  }
+}

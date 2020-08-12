@@ -1,0 +1,25 @@
+@import url(./__container/graph__container.css);
+@import url(./__title/graph__title.css);
+
+
+.graph {
+  padding: 80px 0 58px;
+  background-color: #f5f6f7;
+}
+
+@media(max-width: 768px) {
+  .graph {
+    padding: 44px 0 20px;
+  }
+}
+@media(max-width: 600px) {
+  .graph {
+    margin-bottom: 20px;
+  }
+}
+@media(max-width: 320px) {
+  .graph {
+    margin-bottom: 20px;
+    padding: 24px 0 38px;
+  }
+}

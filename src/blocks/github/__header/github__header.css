@@ -1,0 +1,24 @@
+.github__header {
+  max-width: 83vw;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 65px;
+}
+
+@media(max-width: 870px) {
+  .github__header {
+    max-width: 90vw;
+  }
+}
+@media(max-width: 768px) {
+  .github__header {
+    max-width: 92vw;
+    margin: 10px auto 40px;
+  }
+}
+@media(max-width: 320px) {
+  .github__header {
+    margin: 10px auto 20px;;
+  }
+}

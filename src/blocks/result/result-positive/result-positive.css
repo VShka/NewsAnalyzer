@@ -1,0 +1,22 @@
+@import url(./__title/result-positive__title.css);
+@import url(./__link/result-positive__link.css);
+@import url(./__btn/result-positive__btn.css);
+@import url(./__header/result-positive__header.css);
+@import url(./__link-arrow/result-positive__link-arrow.css);
+@import url(./_hidden/result-positive_hidden.css);
+
+
+.result-positive {
+  max-width: 86vw;
+}
+
+@media(max-width: 768px) {
+  .result-positive {
+    max-width: 90vw;
+  }
+}
+@media(max-width: 375px) {
+  .result-positive {
+    max-width: 95vw;
+  }
+}

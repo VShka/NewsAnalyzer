@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Шкарупа Виктор">
+  <meta name="description" content="NewsAnalyzer - поиск новостей по ключевым словам и статистика запросов">
+  <link rel="apple-touch-icon" sizes="57x57" href="<%=require('../../images/favicon/apple-icon_57x57.png')%>" />
+  <link rel="apple-touch-icon" sizes="60x60" href="<%=require('../../images/favicon/apple-icon_60x60.png')%>" />
+  <link rel="apple-touch-icon" sizes="72x72" href="<%=require('../../images/favicon/apple-icon_72x72.png')%>" />
+  <link rel="apple-touch-icon" sizes="76x76" href="<%=require('../../images/favicon/apple-icon_76x76.png')%>" />
+  <link rel="apple-touch-icon" sizes="114x114" href="<%=require('../../images/favicon/apple-icon_114x114.png')%>" />
+  <link rel="apple-touch-icon" sizes="120x120" href="<%=require('../../images/favicon/apple-icon_120x120.png')%>" />
+  <link rel="apple-touch-icon" sizes="144x144" href="<%=require('../../images/favicon/apple-icon_144x144.png')%>" />
+  <link rel="apple-touch-icon" sizes="152x152" href="<%=require('../../images/favicon/apple-icon_152x152.png')%>" />
+  <link rel="apple-touch-icon" sizes="180x180" href="<%=require('../../images/favicon/apple-icon_180x180.png')%>" />
+  <link rel="icon" type="image/png" sizes="16x16" href="<%=require('../../images/favicon/favicon_16x16.png')%>" />
+  <link rel="icon" type="image/png" sizes="32x32" href="<%=require('../../images/favicon/favicon_32x32.png')%>" />
+  <link rel="icon" type="image/png" sizes="96x96" href="<%=require('../../images/favicon/favicon_96x96.png')%>" />
+  <title>Главная</title>
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css%>">
+</head>
+<body class="page">
+  <header class="header">
+    <div class="header__container">
+      <a href="./index.html" class="header__logo header__logo_white">NewsAnalyzer</a>
+      <nav class="nav">
+        <ul class="nav__list nav__list_header">
+          <li class="nav__item">
+            <a href="./index.html" class="nav__link nav__link_active nav__link_white">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a href="./about/index.html" class="nav__link nav__link_disabled">О проекте</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="search">
+      <div class="search__container">
+        <h1 class="title search__title">
+          Что в мире творится?
+        </h1>
+        <form class="form search__form" name="search" novalidate>
+          <label for="search" class="search__text">
+            Введите в поиске любую тему и узнайте,
+            насколько популярной она была в новостях за прошедшую неделю.
+          </label>
+          <input type="text" id="search" name="search" class="form__input search__input" minlength="2" placeholder="Что будем искать?" required>
+          <button type="submit" class="button search__btn">Искать</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="result result_show">
+
+      <section class="preloader preloader_hidden">
+        <i class="preloader__circle"></i>
+        <h2 class="preloader__text">Идет поиск новостей...</h2>
+      </section>
+
+      <section class="result-negative result-negative_hidden">
+        <img
+          src="<%=require('../../images/sadSmile.svg')%>"
+          alt="Грустный смайл"
+          class="result-negative__image"
+        >
+        <h3 class="result-negative__title title">Ничего не найдено</h3>
+        <p class="result-negative__text">
+          К сожалению по вашему запросу
+          ничего не найдено.
+        </p>
+      </section>
+
+      <section class="result-positive">
+        <div class="result-positive__header">
+          <h2 class="result-positive__title title">Результаты поиска</h2>
+          <a href="./analytics/index.html" class="result-positive__link">
+            Посмотреть аналитику
+            <img
+              src="<%=require('../../images/arrow.svg')%>"
+              alt="Перейти к аналитике"
+              class="result-positive__link-arrow"
+            >
+          </a>
+        </div>
+
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card__bg"></div>
+            <div class="card__info">
+              <p class="card__date">2 августа, 2019</p>
+              <h2 class="card__title title">Национальное достояние – парки</h2>
+              <p class="card__text">
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
+                начала складываться система национальных парков – охраняемых территорий,
+                где и сегодня каждый может приобщиться к природе.
+              </p>
+              <p class="card__source">Источник новости</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__bg"></div>
+            <div class="card__info">
+              <p class="card__date">2 августа, 2019</p>
+              <h2 class="card__title title">Национальное достояние – парки</h2>
+              <p class="card__text">
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
+                начала складываться система национальных парков – охраняемых территорий,
+                где и сегодня каждый может приобщиться к природе.
+              </p>
+              <p class="card__source">Источник новости</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__bg"></div>
+            <div class="card__info">
+              <p class="card__date">2 августа, 2019</p>
+              <h2 class="card__title title">Национальное достояние – парки</h2>
+              <p class="card__text">
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
+                начала складываться система национальных парков – охраняемых территорий,
+                где и сегодня каждый может приобщиться к природе.
+              </p>
+              <p class="card__source">Источник новости</p>
+            </div>
+          </div>
+          <!-- <div class="card">
+            <div class="card__bg"></div>
+            <div class="card__info">
+              <p class="card__date">2 августа, 2019</p>
+              <h2 class="card__title title">Национальное достояние – парки</h2>
+              <p class="card__text">
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
+                начала складываться система национальных парков – охраняемых территорий,
+                где и сегодня каждый может приобщиться к природе.
+              </p>
+              <p class="card__source">Источник новости</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__bg"></div>
+            <div class="card__info">
+              <p class="card__date">2 августа, 2019</p>
+              <h2 class="card__title title">Национальное достояние – парки</h2>
+              <p class="card__text">
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
+                начала складываться система национальных парков – охраняемых территорий,
+                где и сегодня каждый может приобщиться к природе.
+              </p>
+              <p class="card__source">Источник новости</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__bg"></div>
+            <div class="card__info">
+              <p class="card__date">2 августа, 2019</p>
+              <h2 class="card__title title">Национальное достояние – парки</h2>
+              <p class="card__text">
+                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь
+                начала складываться система национальных парков – охраняемых территорий,
+                где и сегодня каждый может приобщиться к природе.
+              </p>
+              <p class="card__source">Источник новости</p>
+            </div>
+          </div> -->
+        </div>
+        <div class="button__container">
+          <button class="button result-positive__btn" type="button">Показать ещё</button>
+        </div>
+      </section>
+    </section>
+
+    <section class="author">
+      <div class="author__info">
+        <img
+          src="<%=require('../../images/avatars/me.png')%>"
+          alt="Аватарка автора"
+          class="author__avatar"
+        >
+        <article class="author__text-container">
+          <h2 class="author__title title">Об авторе</h2>
+          <p class="author__text">
+            Это блок с описанием автора проекта. Здесь следует указать,
+            как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.
+          </p>
+          <p class="author__text">
+            Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились,
+            и чем можете помочь потенциальным заказчикам.
+          </p>
+        </article>
+      </div>
+    </section>
+
+
+    <footer class="footer">
+      <address class="footer__copyright">&copy; 2020 Шкарупа Виктор</address>
+
+      <nav class="nav footer__menu">
+        <ul class="nav__list nav__list_footer">
+          <li class="nav__item">
+            <a href="./index.html" class="nav__link nav__link_black">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a href="./about/index.html" class="nav__link nav__link_black">О проекте</a>
+          </li>
+          <li class="nav__item">
+            <a href="https://praktikum.yandex.ru/" class="nav__link nav__link_black" target="_blank">Яндекс.Практикум</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="nav footer__social">
+        <ul class="nav__list nav__list_social nav__list_footer">
+          <li class="nav__item">
+            <a href="https://vk.com/v_shka95" class="nav__link" target="_blank">
+              <img
+                src="<%=require('../../images/social/vk.svg')%>"
+                alt="Ссылка на Вконтакте"
+                class="nav__image"
+              >
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="https://github.com/VShka" class="nav__link" target="_blank">
+              <img
+                src="<%=require('../../images/social/github.svg')%>"
+                alt="Ссылка на ГитХаб"
+                class="nav__image"
+              >
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="https://www.facebook.com/profile.php?id=100007096356614" class="nav__link" target="_blank">
+              <img
+                src="<%=require('../../images/social/fb.svg')%>"
+                alt="Ссылка на Фейсбук"
+                class="nav__image"
+              >
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+
+  </main>
+
+  <script src="<%= htmlWebpackPlugin.files.js %>"></script>
+</body>
+</html>
