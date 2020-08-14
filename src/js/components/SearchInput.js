@@ -1,15 +1,10 @@
 'use strict'
 
 export default class SearchInput {
-  constructor(callback) {
-    this.callback = callback;
-  }
-
-  validationInput(form) {
+  constructor() {
+    // this.callback = options.callback;
 
   }
 
-  validationButton(button) {
-    button.setAtribute('disabled');
-  }
+
 }

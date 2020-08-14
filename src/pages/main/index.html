@@ -49,7 +49,8 @@
             насколько популярной она была в новостях за прошедшую неделю.
           </label>
           <input type="text" id="search" name="search" class="form__input search__input" minlength="2" placeholder="Что будем искать?" required>
-          <button type="submit" class="button search__btn">Искать</button>
+          <span id="error-name" class="error-message"></span>
+          <button type="submit" class="button search__btn search__btn_disabled" disabled>Искать</button>
         </form>
       </div>
     </section>

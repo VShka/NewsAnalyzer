@@ -2,24 +2,30 @@
 
 import "./style.css"
 
-import NEWS_API_PROPS from "../../js/constants/constants";
+import NEWS_API_PROPS from "../../js/constants/news-api-props";
+import ERRORS from "../../js/constants/errors";
 import NewsApi from "../../js/modules/NewsApi";
+import SearchInput from "../../js/components/SearchInput";
+import Validation from "../../js/components/Validation";
 
 // переменные
+const form = document.forms.search;
 const formInput = document.querySelector('.form__input');
-// кнопка формы
-const formButton = document.querySelector('.search__btn');
 
 
-console.log(formButton);
-
+// инстансы классов
 const newsApi = new NewsApi(NEWS_API_PROPS);
+const searchInput = new SearchInput(
 
-
+  );
+const validation = new Validation(
+  ERRORS,
+  form
+)
 // слушатели
 
 // работа поисковика
-formButton.addEventListener('click', (event) => {
+form.addEventListener('submit', (event) => {
   // сброс перезагрузки страницы
   event.preventDefault();
   // нашли значение поля, которое ввел пользователь
@@ -29,6 +35,8 @@ formButton.addEventListener('click', (event) => {
   .then(data => {
     // преобразовываем полученные данные в строку
     const newsData = JSON.stringify(data.articles);
+    // очищаем localStorage
+    localStorage.clear();
     // закидываем преобразованные данные в хранилище
     localStorage.setItem('news', newsData);
   })

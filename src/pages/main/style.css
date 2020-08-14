@@ -12,3 +12,5 @@
 @import url(../../blocks/button/button.css);
 @import url(../../blocks/result/result.css);
 @import url(../../blocks/footer/footer.css);
+@import url(../../blocks/error-message/error-message.css);
+@import url(../../blocks/error-message/_active/error-message_active.css);
