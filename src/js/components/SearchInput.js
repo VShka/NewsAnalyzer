@@ -10,6 +10,6 @@ export default class SearchInput {
   }
 
   validationButton(button) {
-
+    button.setAtribute('disabled');
   }
 }
