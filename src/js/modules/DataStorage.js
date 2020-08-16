@@ -5,12 +5,12 @@ export default class DataStorage {
     this.apiData = apiData;
   }
 
-  packData(keyWord) {
+  packData() {
     localStorage.clear(); // очищаем хранилище перед наполнением
-    localStorage.setItem(keyWord, this.apiData);
+    localStorage.setItem('news', this.apiData);
   }
 
-  unpackData(keyWord) {
-    JSON.parse(localStorage.getItem(keyWord));
+  unpackData() {
+    return JSON.parse(localStorage.getItem('news'));
   }
 }

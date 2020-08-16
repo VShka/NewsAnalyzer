@@ -6,6 +6,7 @@
 @import url(./__title/card__title.css);
 
 .card {
+  display: block;
   max-width: 400px;
   background-color: #fff;
   border-radius: 16px;

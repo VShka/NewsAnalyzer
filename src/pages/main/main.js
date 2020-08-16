@@ -6,6 +6,7 @@ import NEWS_API_PROPS from "../../js/constants/news-api-props";
 import ERRORS from "../../js/constants/errors";
 import NewsApi from "../../js/modules/NewsApi";
 import DataStorage from "../../js/modules/DataStorage";
+import NewsCard from "../../js/components/NewsCard";
 import SearchInput from "../../js/components/SearchInput";
 import Validation from "../../js/components/Validation";
 
@@ -43,9 +44,15 @@ form.addEventListener('submit', (event) => {
     const newsData = JSON.stringify(data.articles);
     const dataStorage = new DataStorage(newsData);
     // закидываем преобразованные данные в хранилище
-    dataStorage.packData(keyWord);
+    dataStorage.packData();
+    // достаем данные
+    let newsArray = dataStorage.unpackData();
+    // показываем
+    console.log(newsArray[0]);
+    const newsCard = new NewsCard(newsArray[0]);
+    newsCard.create();
+    // закрываем прелоудер
+    preloader.classList.add('preloader_hidden');
   })
   .catch(err => console.error('Ошибка с данными:', err.message));
 })
-// достаем данные из хранилища, парсим и присваеваем
-const news = JSON.parse(localStorage.getItem('news'));

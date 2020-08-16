@@ -9,7 +9,7 @@ export default class NewsApi {
   }
 
   getNews(keyWord) {
-    return fetch(`${this.url}` + `${this.endpoint}` + `q=${keyWord}&` + `from=2020-08-11s&to=2020-08-12&` + `${this.pageSize}` + `${this.apiKey}`)
+    return fetch(`${this.url}` + `${this.endpoint}` + `q=${keyWord}&` + `from=2020-08-06s&to=2020-08-16&` + `${this.pageSize}` + `${this.apiKey}`)
     .then(this._checkRequest);
   }
 
