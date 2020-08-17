@@ -55,6 +55,11 @@ form.addEventListener('submit', (event) => {
     // достаем данные
     let newsArray = dataStorage.unpackData();
 
+    // очищаем блок с карточками от прошлого запроса
+    if (resultPositiveBlock) {
+      newsCardContainer.textContent = '';
+    }
+
     // показываем
     newsArray.forEach(item => {
       const newsCard = new NewsCard(item);
