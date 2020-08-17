@@ -5,6 +5,7 @@ import "./style.css"
 import NEWS_API_PROPS from "../../js/constants/news-api-props";
 import ERRORS from "../../js/constants/errors";
 // class
+import DomElements from "../../js/components/DomElements";
 import NewsApi from "../../js/modules/NewsApi";
 import DataStorage from "../../js/modules/DataStorage";
 import NewsCardList from "../../js/components/NewsCardList";
@@ -27,6 +28,7 @@ const newsCardContainer = document.querySelector('.cards-grid');
 // инстансы классов
 const newsApi = new NewsApi(NEWS_API_PROPS);
 const dataStorage = new DataStorage();
+const domElements = new DomElements();
 const preloader = new Preloader(preloaderBlock);
 
 const searchInput = new SearchInput(
@@ -48,7 +50,7 @@ function callBackForSearchInput(keyWord) {
   // отправляем запрос к Api, передаем в метод аргумент (ключевое слово введеное в инпут)
   newsApi.getNews(keyWord)
   .then(data => {
-    resultBlock.classList.remove('result_hidden'); // показали блок с результатом
+    domElements.showDomElement(resultBlock, 'result_hidden'); // показали блок с результатом
     preloader.showPreloader();
 
 
