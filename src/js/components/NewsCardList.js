@@ -3,9 +3,8 @@
 import NewsCard from "../../js/components/NewsCard";
 
 export default class NewsCardList {
-  constructor(container, storageMethod) {
+  constructor(container) {
     this.container = container;
-    this.storageMethod = storageMethod;
   }
 
   // закидывает карточку в DOM
@@ -13,9 +12,7 @@ export default class NewsCardList {
     this.container.appendChild(instanceCard);
   }
 
-  renderCardIntoStorage() {
-    // достаем данные
-    const newsArray = this.storageMethod();
+  renderCardFromStorage(newsArray) {
     // перебираем и создаем карточку
     newsArray.forEach(news => {
       const newsCard = new NewsCard(news);

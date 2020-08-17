@@ -36,8 +36,7 @@ const searchInput = new SearchInput(
   callBackForSearchInput
   );
 const newsCardList = new NewsCardList(
-  newsCardContainer,
-  dataStorage.unpackData.bind(dataStorage)
+  newsCardContainer
 );
 
 const validation = new Validation(
@@ -45,8 +44,15 @@ const validation = new Validation(
   form
 )
 
+
+checkStorageHasData(); // проверка хранилища на наличие новостей и отрисовка если true
+
+
+
 // функции
 function callBackForSearchInput(keyWord) {
+
+    // достаем данные
   // отправляем запрос к Api, передаем в метод аргумент (ключевое слово введеное в инпут)
   newsApi.getNews(keyWord)
   .then(data => {
@@ -61,9 +67,10 @@ function callBackForSearchInput(keyWord) {
 
     // очищаем cardList
     clearCardList(newsCardContainer);
+    const newsArray = dataStorage.unpackData();
 
     // рисуем карточки
-    newsCardList.renderCardIntoStorage();
+    newsCardList.renderCardFromStorage(newsArray);
 
     // закрываем прелоудер
     preloader.hidePreloader();
@@ -78,3 +85,11 @@ function callBackForSearchInput(keyWord) {
   });
 }
 
+function checkStorageHasData() {
+  if (localStorage.key(0) == 'news') {
+    const newsArray = dataStorage.unpackData();
+    domElements.showDomElement(resultBlock, 'result_hidden');
+    domElements.showDomElement(resultPositiveBlock, 'result-positive_hidden');
+    newsCardList.renderCardFromStorage(newsArray);
+  }
+}
