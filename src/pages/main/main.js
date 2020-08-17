@@ -19,6 +19,8 @@ const form = document.forms.search;
 const formInput = document.querySelector('.form__input');
 const resultBlock = document.querySelector('.result');
 const resultPositiveBlock = resultBlock.querySelector('.result-positive');
+const resultNegativeBlock = resultBlock.querySelector('.result-negative');
+const resultNegativeText = resultNegativeBlock.querySelector('.result-negative__text');
 const preloader = resultBlock.querySelector('.preloader');
 const newsCardContainer = document.querySelector('.cards-grid');
 
@@ -68,7 +70,12 @@ form.addEventListener('submit', (event) => {
     resultPositiveBlock.classList.remove('result-positive_hidden');
 
   })
-  .catch(err => console.error('Ошибка с данными:', err.message));
+  .catch(err => {
+    // resultPositiveBlock.classList.add('result-positive_hidden');
+    // resultNegativeBlock.classList.remove('result-negative_hidden');
+    // resultNegativeText.textContent = 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз';
+    console.error('Ошибка с данными:', err.message);
+  });
 })
 
 
