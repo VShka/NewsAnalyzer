@@ -2,8 +2,6 @@
 
 export default class NewsCard {
   constructor(props) {
-    this.props = props;
-
     this.newsUrl = props.url;
     this.urlImage = props.urlToImage;
     this.date = props.publishedAt;

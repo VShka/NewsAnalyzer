@@ -1,13 +1,13 @@
 'use strict'
 
 export default class DataStorage {
-  constructor(apiData) {
-    this.apiData = apiData;
+  constructor(arrayApi) {
+    this.arrayApi = arrayApi;
   }
 
   packData() {
-    localStorage.clear(); // очищаем хранилище перед наполнением
-    localStorage.setItem('news', this.apiData);
+    localStorage.clear();
+    localStorage.setItem('news', JSON.stringify(this.arrayApi));
   }
 
   unpackData() {

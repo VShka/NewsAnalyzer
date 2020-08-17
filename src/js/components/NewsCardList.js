@@ -1,6 +1,4 @@
 'use strict'
-import NewsCard from "./NewsCard";
-import NewsApi from "../modules/NewsApi";
 
 export default class NewsCardList {
   constructor(container) {
@@ -11,6 +9,4 @@ export default class NewsCardList {
   addCard(instanceCard) {
     this.container.appendChild(instanceCard);
   }
-
-
 }

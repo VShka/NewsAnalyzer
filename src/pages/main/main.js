@@ -1,15 +1,18 @@
 'use strict'
 
 import "./style.css"
-
+//constants
 import NEWS_API_PROPS from "../../js/constants/news-api-props";
 import ERRORS from "../../js/constants/errors";
+// class
 import NewsApi from "../../js/modules/NewsApi";
 import DataStorage from "../../js/modules/DataStorage";
 import NewsCard from "../../js/components/NewsCard";
 import NewsCardList from "../../js/components/NewsCardList";
 import SearchInput from "../../js/components/SearchInput";
 import Validation from "../../js/components/Validation";
+// utils
+import clearCardList from "../../js/utils/clearCardList";
 
 // переменные
 const form = document.forms.search;
@@ -44,10 +47,7 @@ form.addEventListener('submit', (event) => {
   newsApi.getNews(keyWord)
   .then(data => {
     resultBlock.classList.remove('result_hidden'); // показали блок с результатом
-
-    // преобразовываем полученные данные в строку
-    const newsData = JSON.stringify(data.articles);
-    const dataStorage = new DataStorage(newsData);
+    const dataStorage = new DataStorage(data.articles);
 
     // закидываем преобразованные данные в хранилище
     dataStorage.packData();
@@ -55,11 +55,8 @@ form.addEventListener('submit', (event) => {
     // достаем данные
     let newsArray = dataStorage.unpackData();
 
-    // очищаем блок с карточками от прошлого запроса
-    if (resultPositiveBlock) {
-      newsCardContainer.textContent = '';
-    }
-
+    // очищаем cardList
+    clearCardList(newsCardContainer);
     // показываем
     newsArray.forEach(item => {
       const newsCard = new NewsCard(item);
@@ -73,3 +70,8 @@ form.addEventListener('submit', (event) => {
   })
   .catch(err => console.error('Ошибка с данными:', err.message));
 })
+
+
+// функции
+
+
