@@ -10,26 +10,28 @@ import DataStorage from "../../js/modules/DataStorage";
 import NewsCardList from "../../js/components/NewsCardList";
 import SearchInput from "../../js/components/SearchInput";
 import Validation from "../../js/components/Validation";
+import Preloader from "../../js/components/Preloader";
 // utils
 import clearCardList from "../../js/utils/clearCardList";
 
 // переменные
 const form = document.forms.search;
-const formInput = document.querySelector('.form__input');
 const resultBlock = document.querySelector('.result');
 const resultPositiveBlock = resultBlock.querySelector('.result-positive');
 const resultNegativeBlock = resultBlock.querySelector('.result-negative');
 const resultNegativeText = resultNegativeBlock.querySelector('.result-negative__text');
-const preloader = resultBlock.querySelector('.preloader');
+const preloaderBlock = resultBlock.querySelector('.preloader');
 const newsCardContainer = document.querySelector('.cards-grid');
 
 
 // инстансы классов
 const newsApi = new NewsApi(NEWS_API_PROPS);
 const dataStorage = new DataStorage();
+const preloader = new Preloader(preloaderBlock);
 
 const searchInput = new SearchInput(
-
+  form,
+  callBackForSearchInput
   );
 const newsCardList = new NewsCardList(
   newsCardContainer,
@@ -40,19 +42,14 @@ const validation = new Validation(
   ERRORS,
   form
 )
-// слушатели
 
-// работа поисковика
-form.addEventListener('submit', (event) => {
-  // сброс перезагрузки страницы
-  event.preventDefault();
-  // нашли значение поля, которое ввел пользователь
-  const keyWord = formInput.value;
+// функции
+function callBackForSearchInput(keyWord) {
   // отправляем запрос к Api, передаем в метод аргумент (ключевое слово введеное в инпут)
   newsApi.getNews(keyWord)
   .then(data => {
     resultBlock.classList.remove('result_hidden'); // показали блок с результатом
-    preloader.classList.remove('preloader_hidden');
+    preloader.showPreloader();
 
 
     // закидываем преобразованные данные в хранилище
@@ -67,6 +64,7 @@ form.addEventListener('submit', (event) => {
     newsCardList.renderCardIntoStorage();
 
     // закрываем прелоудер
+    preloader.hidePreloader();
     resultPositiveBlock.classList.remove('result-positive_hidden');
 
   })
@@ -76,9 +74,5 @@ form.addEventListener('submit', (event) => {
     // resultNegativeText.textContent = 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз';
     console.error('Ошибка с данными:', err.message);
   });
-})
-
-
-// функции
-
+}
 
