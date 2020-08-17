@@ -1,13 +1,12 @@
 'use strict'
 
 export default class DataStorage {
-  constructor(arrayApi) {
-    this.arrayApi = arrayApi;
+  constructor() {
   }
 
-  packData() {
+  packData(arrayApi) {
     localStorage.clear();
-    localStorage.setItem('news', JSON.stringify(this.arrayApi));
+    localStorage.setItem('news', JSON.stringify(arrayApi));
   }
 
   unpackData() {

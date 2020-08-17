@@ -7,7 +7,6 @@ import ERRORS from "../../js/constants/errors";
 // class
 import NewsApi from "../../js/modules/NewsApi";
 import DataStorage from "../../js/modules/DataStorage";
-import NewsCard from "../../js/components/NewsCard";
 import NewsCardList from "../../js/components/NewsCardList";
 import SearchInput from "../../js/components/SearchInput";
 import Validation from "../../js/components/Validation";
@@ -27,11 +26,15 @@ const newsCardContainer = document.querySelector('.cards-grid');
 
 // инстансы классов
 const newsApi = new NewsApi(NEWS_API_PROPS);
+const dataStorage = new DataStorage();
 
 const searchInput = new SearchInput(
 
   );
-const newsCardList = new NewsCardList(newsCardContainer);
+const newsCardList = new NewsCardList(
+  newsCardContainer,
+  dataStorage.unpackData.bind(dataStorage)
+);
 
 const validation = new Validation(
   ERRORS,
@@ -49,24 +52,21 @@ form.addEventListener('submit', (event) => {
   newsApi.getNews(keyWord)
   .then(data => {
     resultBlock.classList.remove('result_hidden'); // показали блок с результатом
-    const dataStorage = new DataStorage(data.articles);
+    preloader.classList.remove('preloader_hidden');
+
 
     // закидываем преобразованные данные в хранилище
-    dataStorage.packData();
+    dataStorage.packData(data.articles);
 
-    // достаем данные
-    let newsArray = dataStorage.unpackData();
+
 
     // очищаем cardList
     clearCardList(newsCardContainer);
-    // показываем
-    newsArray.forEach(item => {
-      const newsCard = new NewsCard(item);
-      newsCardList.addCard(newsCard.create());
-    });
+
+    // рисуем карточки
+    newsCardList.renderCardIntoStorage();
 
     // закрываем прелоудер
-    preloader.classList.add('preloader_hidden');
     resultPositiveBlock.classList.remove('result-positive_hidden');
 
   })
