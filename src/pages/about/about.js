@@ -18,4 +18,4 @@ const commitCardList = new CommitCardList(
 );
 
 
-commitCardList.renderCommit();
+// commitCardList.renderCommit();
