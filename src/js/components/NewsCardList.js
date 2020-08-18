@@ -14,9 +14,19 @@ export default class NewsCardList {
 
   renderCardFromStorage(newsArray) {
     // перебираем и создаем карточку
-    newsArray.forEach(news => {
-      const newsCard = new NewsCard(news);
-      this._addCard(newsCard.create());
-    });
+    if (newsArray.length > 3) {
+      newsArray.splice(0, 3)
+      .forEach(news => {
+        const newsCard = new NewsCard(news);
+        this._addCard(newsCard.create());
+      });
+    }
+
+    if (newsArray.length <= 3) {
+      newsArray.forEach(news => {
+        const newsCard = new NewsCard(news);
+        this._addCard(newsCard.create());
+      });
+    }
   }
 }

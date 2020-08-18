@@ -51,43 +51,57 @@ checkStorageHasData(); // проверка хранилища на наличи�
 
 // функции
 function callBackForSearchInput(keyWord) {
+  domElements.showDomElement(resultBlock, 'result_hidden'); // показываем блок результатов
 
-    // достаем данные
+   // скрываем негативный результат(в случае, когда пердыдущий запрос был негативным)
+  domElements.hideDomElement(resultNegativeBlock, 'result-negative_hidden');
+
+  // скрываем блок с новостями(в случае, когда предыдущий запрос был позитивным)
+  domElements.hideDomElement(resultPositiveBlock, 'result-positive_hidden');
+  preloader.showPreloader(); // показываем
+
   // отправляем запрос к Api, передаем в метод аргумент (ключевое слово введеное в инпут)
   newsApi.getNews(keyWord)
   .then(data => {
-    domElements.showDomElement(resultBlock, 'result_hidden'); // показали блок с результатом
-    preloader.showPreloader();
 
+    // проверка на наличие новостей по ключу
+    if(data.totalResults === 0) {
+      domElements.showDomElement(resultBlock, 'result_hidden');
+      domElements.hideDomElement(resultPositiveBlock, 'result-positive_hidden');
+      domElements.showDomElement(resultNegativeBlock, 'result-negative_hidden');
+    }
 
-    // закидываем преобразованные данные в хранилище
-    dataStorage.packData(data.articles);
+    if (data.totalResults >= 1) {
+      dataStorage.packData(data.articles); // закидываем преобразованные данные в хранилище
 
+      clearCardList(newsCardContainer); // очищаем cardList
 
+      const newsArray = dataStorage.unpackData(); // достаем данные
 
-    // очищаем cardList
-    clearCardList(newsCardContainer);
-    const newsArray = dataStorage.unpackData();
+      newsCardList.renderCardFromStorage(newsArray); // рисуем карточки
 
-    // рисуем карточки
-    newsCardList.renderCardFromStorage(newsArray);
+      preloader.hidePreloader(); // прячем
 
-    // закрываем прелоудер
-    preloader.hidePreloader();
-    resultPositiveBlock.classList.remove('result-positive_hidden');
+      domElements.showDomElement(resultPositiveBlock, 'result-positive_hidden'); // показываем блок с карточками
+    }
+
 
   })
   .catch(err => {
-    // resultPositiveBlock.classList.add('result-positive_hidden');
-    // resultNegativeBlock.classList.remove('result-negative_hidden');
-    // resultNegativeText.textContent = 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз';
+    domElements.hideDomElement(resultPositiveBlock ,'result-positive_hidden');
+    domElements.showDomElement(resultNegativeBlock, 'result-negative_hidden');
+    domElements.changeContent(resultNegativeText, 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз');
     console.error('Ошибка с данными:', err.message);
-  });
+  })
+  .finally(() => {
+    preloader.hidePreloader(); // прячем
+  })
 }
 
 function checkStorageHasData() {
   if (localStorage.key(0) == 'news') {
     const newsArray = dataStorage.unpackData();
+
     domElements.showDomElement(resultBlock, 'result_hidden');
     domElements.showDomElement(resultPositiveBlock, 'result-positive_hidden');
     newsCardList.renderCardFromStorage(newsArray);
