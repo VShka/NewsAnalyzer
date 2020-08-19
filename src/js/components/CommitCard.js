@@ -4,7 +4,11 @@ export default class CommitCard{
   constructor(props) {
     this.name = props.commit.author.name;
     this.email = props.commit.author.email;
-    this.date = props.commit.author.date;
+    this.date = new Date(props.commit.author.date).toLocaleString('ru', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
     this.message = props.commit.message;
     this.ownerAvatar = props.author.avatar_url;
   }
