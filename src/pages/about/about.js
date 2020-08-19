@@ -9,6 +9,7 @@ import Swiper from "swiper/bundle";
 // constants
 import GITHUB_API_PROPS from "../../js/constants/github-api-props";
 
+
 // class
 import GithubApi from "../../js/modules/GithubApi";
 import CommitCardList from "../../js/components/CommitCardList";
@@ -20,9 +21,7 @@ const commitCardList = new CommitCardList(
   commitContainer,
   githubApi
 );
-
-commitCardList.renderCommit();
-
+// слайдер
 const swiper = new Swiper('.swiper-container', {
   pagination: {
     el: '.swiper-pagination',
@@ -37,6 +36,7 @@ const swiper = new Swiper('.swiper-container', {
   observer: true
 });
 
+commitCardList.renderCommit();
 
 
 
