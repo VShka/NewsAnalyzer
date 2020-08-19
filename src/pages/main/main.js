@@ -78,7 +78,7 @@ function callBackForSearchInput(keyWord) {
 
       const newsArray = dataStorage.unpackData(); // достаем данные
 
-      newsCardList.renderCardFromStorage(newsArray); // рисуем карточки
+      newsCardList.renderCardDefault(newsArray); // рисуем карточки
 
       preloader.hidePreloader(); // прячем
 
@@ -87,11 +87,10 @@ function callBackForSearchInput(keyWord) {
 
 
   })
-  .catch(err => {
+  .catch(() => {
     domElements.hideDomElement(resultPositiveBlock ,'result-positive_hidden');
     domElements.showDomElement(resultNegativeBlock, 'result-negative_hidden');
     domElements.changeContent(resultNegativeText, 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз');
-    console.error('Ошибка с данными:', err.message);
   })
   .finally(() => {
     preloader.hidePreloader(); // прячем
@@ -104,6 +103,6 @@ function checkStorageHasData() {
 
     domElements.showDomElement(resultBlock, 'result_hidden');
     domElements.showDomElement(resultPositiveBlock, 'result-positive_hidden');
-    newsCardList.renderCardFromStorage(newsArray);
+    newsCardList.renderCardDefault(newsArray);
   }
 }

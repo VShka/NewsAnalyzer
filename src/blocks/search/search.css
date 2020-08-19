@@ -22,6 +22,7 @@
 @media(max-width: 768px) {
   .search {
     background-image: url(../../images/bg_768px.png);
+    background-size: cover;
     min-height: 400px;
     margin-top: -65px;
 }

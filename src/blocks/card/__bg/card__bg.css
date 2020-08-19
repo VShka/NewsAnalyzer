@@ -8,7 +8,7 @@
 
 @media(max-width: 768px) {
   .card__bg {
-    height: 150px;
+    min-height: 113px;
     background-size: contain;
     background-repeat: no-repeat;
   }
