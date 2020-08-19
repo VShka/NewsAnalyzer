@@ -21,7 +21,7 @@ export default class CommitCardList {
         const commitCard = new CommitCard(commit);
         this._addCard(commitCard.create());
       });
-    });
-    // .catch(err => console.error('Ошибка с данными:', err.message));
+    })
+    .catch(err => console.error('Ошибка с данными:', err.message));
   }
 }
