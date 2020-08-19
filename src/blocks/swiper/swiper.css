@@ -1,0 +1,9 @@
+@import url(./swiper__dots/swiper__dots.css);
+@import url(./swiper__wrapper/swiper__wrapper.css);
+.swiper {
+  width: 27%;
+  min-height: 288px;
+  margin-right: 10px;
+  background: #fff;
+  border-radius: 16px;
+}

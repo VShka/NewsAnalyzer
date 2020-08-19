@@ -16,7 +16,8 @@ export default class CommitCardList {
     this.api
     .getCommits()
     .then(commits => {
-      commits.forEach(commit => {
+      commits.splice(0, 20)
+      .forEach(commit => {
         const commitCard = new CommitCard(commit);
         this._addCard(commitCard.create());
       });

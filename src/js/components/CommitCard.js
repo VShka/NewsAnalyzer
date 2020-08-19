@@ -23,7 +23,7 @@ export default class CommitCard{
     const commitText = document.createElement('p');
 
     // накидываем классы и атрибуты
-    commitCard.classList.add('carousel-cell');
+    commitCard.classList.add('swiper-slide', 'swiper');
     commit.classList.add('commit');
     commitDate.classList.add('commit__data');
     commitAuthor.classList.add('commit__author');
@@ -52,6 +52,6 @@ export default class CommitCard{
     commitInfo.appendChild(commitName);
     commitInfo.appendChild(commitEmail);
 
-    return commit;
+    return commitCard;
   }
 }

@@ -1,6 +1,5 @@
 .commit__author {
-  display: grid;
-  grid-template-columns: .3fr 1fr;
+  display: flex;
 }
 
 @media(max-width: 1200px) {
