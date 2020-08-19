@@ -4,7 +4,11 @@ export default class NewsCard {
   constructor(props) {
     this.newsUrl = props.url;
     this.urlImage = props.urlToImage;
-    this.date = props.publishedAt;
+    this.date = new Date(props.publishedAt).toLocaleString('ru', { // преобразование даты в нужный формат
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
     this.title = props.title;
     this.text = props.description;
     this.source = props.source.name;
