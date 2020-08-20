@@ -61,6 +61,7 @@ function callBackForSearchInput(keyWord) {
   // отправляем запрос к Api, передаем в метод аргумент (ключевое слово введеное в инпут)
   newsApi.getNews(keyWord)
   .then(data => {
+    data.ask = keyWord; // сохраняем в объект значение инпута для использования в аналитике
     // проверка на наличие новостей
     if(data.totalResults === 0) {
       domElements.showDomElement(resultBlock, 'result_hidden');
@@ -69,13 +70,13 @@ function callBackForSearchInput(keyWord) {
     }
 
     if (data.totalResults >= 1) {
-      dataStorage.packData(data.articles); // закидываем преобразованные данные в хранилище
+      dataStorage.packData(data); // закидываем преобразованные данные в хранилище
 
       newsCardList.clearCardList(); // очищаем cardList
 
       const newsArray = dataStorage.unpackData(); // достаем данные
 
-      newsCardList.renderCardDefault(newsArray); // рисуем карточки
+      newsCardList.renderCardDefault(newsArray.articles); // рисуем карточки
 
       preloader.hidePreloader(); // прячем
 
@@ -95,11 +96,10 @@ function callBackForSearchInput(keyWord) {
 }
 
 function checkStorageHasData() {
-  if (localStorage.key(0) == 'news') {
-    const newsArray = dataStorage.unpackData();
-
+  const newsArray = dataStorage.unpackData();
+  if (newsArray) {
     domElements.showDomElement(resultBlock, 'result_hidden');
     domElements.showDomElement(resultPositiveBlock, 'result-positive_hidden');
-    newsCardList.renderCardDefault(newsArray);
+    newsCardList.renderCardDefault(newsArray.articles);
   }
 }
