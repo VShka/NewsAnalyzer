@@ -1,6 +1,7 @@
 @import url(./_hidden/result-positive__btn_hidden.css);
 
 .result-positive__btn {
+  display: none;
   width: 100%;
   min-height: 64px;
   background: #FFFFFF;

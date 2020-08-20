@@ -12,8 +12,6 @@ import NewsCardList from "../../js/components/NewsCardList";
 import SearchInput from "../../js/components/SearchInput";
 import Validation from "../../js/components/Validation";
 import Preloader from "../../js/components/Preloader";
-// utils
-import clearCardList from "../../js/utils/clearCardList";
 
 // переменные
 const form = document.forms.search;
@@ -23,6 +21,7 @@ const resultNegativeBlock = resultBlock.querySelector('.result-negative');
 const resultNegativeText = resultNegativeBlock.querySelector('.result-negative__text');
 const preloaderBlock = resultBlock.querySelector('.preloader');
 const newsCardContainer = document.querySelector('.cards-grid');
+const buttonShowMore = document.querySelector('.result-positive__btn');
 
 
 // инстансы классов
@@ -35,15 +34,16 @@ const searchInput = new SearchInput(
   form,
   callBackForSearchInput
   );
+
 const newsCardList = new NewsCardList(
-  newsCardContainer
+  newsCardContainer,
+  buttonShowMore
 );
 
 const validation = new Validation(
   ERRORS,
   form
 )
-
 
 checkStorageHasData(); // проверка хранилища на наличие новостей и отрисовка если true
 
@@ -52,10 +52,8 @@ checkStorageHasData(); // проверка хранилища на наличи�
 // функции
 function callBackForSearchInput(keyWord) {
   domElements.showDomElement(resultBlock, 'result_hidden'); // показываем блок результатов
-
    // скрываем негативный результат(в случае, когда пердыдущий запрос был негативным)
   domElements.hideDomElement(resultNegativeBlock, 'result-negative_hidden');
-
   // скрываем блок с новостями(в случае, когда предыдущий запрос был позитивным)
   domElements.hideDomElement(resultPositiveBlock, 'result-positive_hidden');
   preloader.showPreloader(); // показываем
@@ -64,7 +62,7 @@ function callBackForSearchInput(keyWord) {
   newsApi.getNews(keyWord)
   .then(data => {
 
-    // проверка на наличие новостей по ключу
+    // проверка на наличие новостей
     if(data.totalResults === 0) {
       domElements.showDomElement(resultBlock, 'result_hidden');
       domElements.hideDomElement(resultPositiveBlock, 'result-positive_hidden');
@@ -74,7 +72,7 @@ function callBackForSearchInput(keyWord) {
     if (data.totalResults >= 1) {
       dataStorage.packData(data.articles); // закидываем преобразованные данные в хранилище
 
-      clearCardList(newsCardContainer); // очищаем cardList
+      newsCardList.clearCardList(); // очищаем cardList
 
       const newsArray = dataStorage.unpackData(); // достаем данные
 

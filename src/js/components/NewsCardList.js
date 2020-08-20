@@ -3,11 +3,11 @@
 import NewsCard from "../../js/components/NewsCard";
 
 export default class NewsCardList {
-  constructor(container) {
+  constructor(container, buttonShowMore) {
     this.container = container;
 
     this.arrayCount = 0;
-    this.buttonShowMore = document.querySelector('.result-positive__btn');
+    this.buttonShowMore = buttonShowMore;
     this._setEventListener();
   }
 
@@ -18,10 +18,10 @@ export default class NewsCardList {
 
   renderCardDefault(newsArray) {
     this.newsArray = newsArray;
-    this._renderCardPerClick();
-    if (newsArray.length == 0) {
-      this.buttonShowMore.setAttribute('style', 'display: none');
+    if (newsArray.length > 3) {
+      this.buttonShowMore.setAttribute('style', 'display: block');
     }
+    this._renderCardPerClick();
   }
 
   _renderCardPerClick() {
@@ -42,5 +42,9 @@ export default class NewsCardList {
     this.buttonShowMore.addEventListener('click', () => {
       this._showMoreCard();
     })
+  }
+
+  clearCardList() {
+    this.container.textContent = '';
   }
 }

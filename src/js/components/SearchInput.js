@@ -1,9 +1,9 @@
 'use strict'
 
 export default class SearchInput {
-  constructor(form, callback) {
+  constructor(form, callBackForSearchInput) {
     this.form = form;
-    this.callback = callback;
+    this.callBackForSearchInput = callBackForSearchInput;
 
     this._setEventListener();
   }
@@ -15,7 +15,7 @@ export default class SearchInput {
       // нашли значение поля, которое ввел пользователь
       const keyWord = this.form.elements.search.value;
 
-      this.callback(keyWord);
+      this.callBackForSearchInput(keyWord);
     })
   }
 
