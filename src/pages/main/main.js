@@ -61,7 +61,6 @@ function callBackForSearchInput(keyWord) {
   // отправляем запрос к Api, передаем в метод аргумент (ключевое слово введеное в инпут)
   newsApi.getNews(keyWord)
   .then(data => {
-
     // проверка на наличие новостей
     if(data.totalResults === 0) {
       domElements.showDomElement(resultBlock, 'result_hidden');
