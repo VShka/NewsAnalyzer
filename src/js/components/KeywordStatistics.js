@@ -31,10 +31,12 @@ export default class KeywordStatistics {
   // метод для подсчёта упоминаний ключевого слова в заголовках
   _countingMentions() {
     const arrayTitles = [];
+    // перебираем массив и пушим в пустой заголовки из массива
     this.dataStat.articles.find(item => {
       arrayTitles.push(item.title);
     })
-
+    // фильтруем массив на совпадения по ключевому слову и создаем новый из найденных совпадений
+    // для точного поиска приводим массив и ключевое слово к нижнему регистру
     const arrayMatches = arrayTitles.join(', ').toLowerCase().split(', ')
     .filter( item => {
       return item.includes(this.userAsk.toLowerCase());
