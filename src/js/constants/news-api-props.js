@@ -5,7 +5,7 @@ const millisecond = 1000;
 const weekInMillisecond = day * hour * second * millisecond;
 
 const NEWS_API_PROPS = {
-  url: 'https://newsapi.org/v2/',
+  url: 'https://nomoreparties.co/news/v2/',
   apiKey: '&apiKey=4e9d7268f6ff410a996b1f56f3eef56d',
   endpoint: 'everything?',
   pageSize: 'pageSize=100',
