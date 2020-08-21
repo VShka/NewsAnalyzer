@@ -12,7 +12,8 @@ export default class NewsApi {
 
   getNews(keyWord) {
     return fetch(`${this.url}` + `${this.endpoint}` + `q=${keyWord}&` + `from=${this.weekAgo}&to=${this.today}&` + `${this.pageSize}` + `${this.apiKey}`)
-    .then(this._checkRequest);
+    .then(this._checkRequest)
+    .catch(this._catchErr);
   }
 
 
@@ -21,5 +22,8 @@ export default class NewsApi {
     if (res.ok) return res.json();
 
     return Promise.reject(new Error(res.status));
+  }
+  _catchErr(err) {
+    return Promise.reject(new Error(err.message));
   }
 }
