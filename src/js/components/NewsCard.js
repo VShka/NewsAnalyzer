@@ -1,5 +1,4 @@
 'use strict'
-import capImage from "../constants/cap-image";
 
 export default class NewsCard {
   constructor(props) {
@@ -30,11 +29,8 @@ export default class NewsCard {
     card.setAttribute('target', '_blank');
     card.setAttribute('href', `${this.newsUrl}`);
     cardBackground.classList.add('card__bg');
-    if (!this.urlImage) {
-      cardBackground.setAttribute('style', `background-image: url(${capImage})`)
-    } else {
-      cardBackground.setAttribute('style', `background-image: url(${this.urlImage})`)
-    }
+    cardBackground.setAttribute('style', `background-image: url(${this.urlImage})`)
+
 
     cardInfo.classList.add('card__info');
     cardDate.classList.add('card__date');
