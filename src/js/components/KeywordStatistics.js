@@ -11,7 +11,6 @@ export default class KeywordStatistics {
 
     this.userAsk = this.dataStat.ask;
     this.totalResults = this.dataStat.totalResults;
-    this._matchMentionsByDays();
   }
 
   showResults() {
