@@ -17,16 +17,16 @@ export default class KeywordStatistics {
     // заголовок с запросом пользователя
     this.analyticsTitle.textContent = `Вы спросили: «${this.userAsk}»`;
 
-    // подзаголовки кол-во запросов
+    //  кол-во запросов
     const ResultValue = document.createElement('span');
     ResultValue.classList.add('analytics__text_strong');
-    ResultValue.textContent = `${this.totalResults}`;
+    ResultValue.textContent = ` ${this.totalResults}`;
     this.analyticsTitleResult.appendChild(ResultValue);
 
     // упоминаний в заголовках
     this.titleMention = this._countingMentions();
     const MentionValue = ResultValue.cloneNode(true);
-    MentionValue.textContent = `${this.titleMention.length}`;
+    MentionValue.textContent = ` ${this.titleMention.length}`;
     this.analyticsTitleMention.appendChild(MentionValue);
   }
 
