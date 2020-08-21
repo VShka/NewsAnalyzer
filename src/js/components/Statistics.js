@@ -1,5 +1,7 @@
 'use strict'
 
+import today from "../constants/today";
+
 export default class Statistics {
   constructor(element, dataStat) {
     this.element = element;
@@ -10,16 +12,18 @@ export default class Statistics {
     this.chartLabel = this.element.querySelectorAll('.chart__label');
     this.chartValue = this.element.querySelectorAll('.chart__value');
 
-    this.userAsk = this.dataStat.ask;
     this.totalResults = this.dataStat.totalResults;
     this.newsArticles = this.dataStat.articles;
-    this.newsTitle =  this.newsArticles.map(item => item.title);
-    this.newsDescription = this.newsArticles.map(item => item.description);
   }
 
   renderChart() {
-    this._matchMentionsByDays();
+    // отрисовываем актуальный месяц
+    const chartHeaderDate = document.createElement('span');
+    chartHeaderDate.textContent = `(${today})`;
+    this.chartHeader.appendChild(chartHeaderDate);
+
     // отрисовываем дни недели
+    this._matchMentionsByDays();
     this.dayOfWeek = Object.keys(this.objectMatches).sort();
     Array.from(this.chartLabel).forEach( (label, index) => {
       label.textContent = this.dayOfWeek[index];
@@ -27,7 +31,6 @@ export default class Statistics {
 
     // отрисовываем шкалу
     this.percentRequests = Object.values(this.objectMatches);
-    console.log(this.percentRequests)
     Array.from(this.chartValue).forEach( (value, index) => {
       value.textContent = this.percentRequests[index].length;
       value.setAttribute('style', `width: ${(this.percentRequests[index].length / this.totalResults * 100).toFixed(2)}%`);
@@ -51,16 +54,5 @@ export default class Statistics {
 
       return object;
     }, {});
-  }
-
-  _countingMentions() {
-    const arrayForFindMatches = this.newsTitle.concat(this.newsDescription);
-    // фильтруем массив на совпадения по ключевому слову и создаем новый из найденных совпадений
-    // для точного поиска приводим массив и ключевое слово к нижнему регистру
-    const arrayMatches = arrayForFindMatches.join(', ').toLowerCase().split(', ')
-    .filter( item => {
-      return item.includes(this.userAsk.toLowerCase());
-    })
-    return arrayMatches;
   }
 }
