@@ -1,6 +1,7 @@
 'use strict'
 
-import NewsCard from "../../js/components/NewsCard";
+import NewsCard from "../components/NewsCard";
+import showCardPerClick from "../constants/show-card-per-click";
 
 export default class NewsCardList {
   constructor(container, buttonShowMore) {
@@ -18,14 +19,12 @@ export default class NewsCardList {
 
   renderCardDefault(newsArray) {
     this.newsArray = newsArray;
-    if (newsArray.length > 3) {
-      this.buttonShowMore.setAttribute('style', 'display: block');
-    }
     this._renderCardPerClick();
   }
 
   _renderCardPerClick() {
-    const sliceArray = this.newsArray.slice(this.arrayCount * 3, (this.arrayCount + 1) * 3);
+    const sliceArray = this.newsArray
+                      .slice(this.arrayCount * showCardPerClick, (this.arrayCount + 1) * showCardPerClick);
     // перебираем и создаем карточку
     sliceArray.forEach(news => {
       const newsCard = new NewsCard(news);
@@ -36,11 +35,15 @@ export default class NewsCardList {
   _showMoreCard() {
     this.arrayCount++;
     this._renderCardPerClick();
+    if (this.arrayCount >= this.newsArray.length / showCardPerClick - 1) {
+      this.buttonShowMore.classList.add('result-positive__btn_hidden');
+    }
   }
 
   _setEventListener() {
     this.buttonShowMore.addEventListener('click', () => {
-      this._showMoreCard();
+    this._showMoreCard();
+    console.log(this.arrayCount)
     })
   }
 
