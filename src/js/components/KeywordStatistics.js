@@ -1,3 +1,5 @@
+'use strict'
+
 export default class KeywordStatistics {
   constructor(element, dataStat = []) {
     this.element = element;
@@ -9,6 +11,7 @@ export default class KeywordStatistics {
 
     this.userAsk = this.dataStat.ask;
     this.totalResults = this.dataStat.totalResults;
+    this._matchMentionsByDays();
   }
 
   showResults() {
