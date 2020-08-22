@@ -1,9 +1,0 @@
-.flickity-page-dots {
-  bottom: -60px;
-}
-
-@media(max-width: 405px) {
-  .flickity-page-dots {
-    bottom: -30px;
-  }
-}

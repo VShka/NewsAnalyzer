@@ -4,9 +4,9 @@
   "description": "diploma's project",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist && cross-env NODE_ENV=production webpack --mode production",
-    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
-    "deploy": "cross-env NODE_ENV=production gh-pages -d dist"
+    "build": "rimraf dist && NODE_ENV=production webpack --mode production",
+    "start": "NODE_ENV=development webpack-dev-server --mode development --open --watch",
+    "deploy": "NODE_ENV=production gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "babel-polyfill": "6.26.0",
-    "core-js": "3.1.4"
+    "core-js": "3.1.4",
+    "swiper": "6.1.2"
   }
 }

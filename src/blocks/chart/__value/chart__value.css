@@ -1,11 +1,3 @@
-@import url(./_first/chart__value-bar_first.css);
-@import url(./_second/chart__value-bar_second.css);
-@import url(./_third/chart__value-bar_third.css);
-@import url(./_fourth/chart__value-bar_fourth.css);
-@import url(./_fifth/chart__value-bar_fifth.css);
-@import url(./_sixth/chart__value-bar_sixth.css);
-@import url(./_seventh/chart__value-bar_seventh.css);
-
 .chart__value {
   font-style: normal;
   font-weight: bold;

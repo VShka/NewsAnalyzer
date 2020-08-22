@@ -1,0 +1,10 @@
+.swiper__dots {
+  position: static;
+  margin-top: 60px;
+}
+
+@media(max-width: 405px) {
+  .swiper__dots {
+    margin-top: 30px;
+  }
+}

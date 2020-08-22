@@ -1,13 +1,14 @@
 .card__bg {
-  height: 272px;
-  background-image: url(../../../images/cards/card_1.jpg);
+  min-height: 210px;;
+  background-size: cover;
+  background-repeat: no-repeat;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
 
 @media(max-width: 768px) {
   .card__bg {
-    height: 150px;
+    min-height: 113px;
     background-size: contain;
     background-repeat: no-repeat;
   }
