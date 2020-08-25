@@ -7,3 +7,15 @@
   background: #fff;
   border-radius: 16px;
 }
+
+@media (max-width: 1024px) {
+  .swiper {
+    width: 40%;
+    min-height: 240px;
+  }
+}
+@media (max-width: 425px) {
+  .swiper {
+    width: 86%;
+  }
+}
